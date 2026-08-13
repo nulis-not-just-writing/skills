@@ -1,0 +1,94 @@
+# Skills penulisan artikel jurnal untuk Claude
+
+Lima skill Claude untuk menulis, memoles, menyubmit, dan merevisi artikel jurnal berstandar
+Q1 (Scopus/WoS) — plus satu untuk menjalankan *systematic literature review* dari nol sampai
+manuskrip. Bahasa kerja Indonesia; naskah keluarannya mengikuti bahasa jurnal target.
+
+Ditulis untuk kondisi nyata peneliti Indonesia: korpus berbahasa Indonesia dan Arab, jurnal
+nasional yang cakupan indeksnya terbatas, kajian keislaman dan hukum yang tidak cocok dengan
+PICO, dan sering hanya satu peneliti yang mengerjakan.
+
+## Skill
+
+| Skill | Menjawab | Versi |
+|---|---|---|
+| [`nulis`](nulis/) | apakah tiap section punya *move* yang benar, dan apakah RQ terlacak dari gap sampai kontribusi? | 1.3.0 |
+| [`polish-manuscript`](polish-manuscript/) | apakah kalimatnya jelas, argumennya kokoh, klaimnya terkalibrasi? | 1.3.0 |
+| [`submit`](submit/) | apakah naskah lolos sepuluh menit pertama editor, atau dipulangkan sebelum direview? | 1.4.0 |
+| [`revisi`](revisi/) | apakah tiap butir komentar reviewer terjawab, dan bisakah editor menemukan perubahannya? | 1.2.0 |
+| [`slr-cowork`](slr-cowork/) | apakah tinjauan sistematisnya dapat direkonsiliasi angkanya dan dipertahankan metodenya? | 1.4.0 |
+
+## Berdiri sendiri atau berdampingan
+
+**Setiap skill berfungsi penuh sendirian.** Bila tetangganya terpasang, sebagian langkah jadi
+lebih dalam — tetapi tidak ada langkah yang macet karena tetangganya tidak ada. Tiap SKILL.md
+memuat bagian *"Berdiri sendiri atau berdampingan"* dengan tabel: apa yang bertambah bila skill
+lain ada, dan apa jalan keluarnya bila tidak.
+
+Satu aturan berlaku di kelimanya: **langkah yang tidak bisa dijalankan tidak dianggap lolos.**
+Skill diminta mengatakan apa adanya bahwa langkah itu di luar jangkauan, bukan diam-diam
+melewatinya.
+
+## Pasang
+
+Salin folder skill yang Anda mau ke direktori skill Claude Code:
+
+```bash
+git clone https://github.com/nulis-not-just-writing/skills.git
+cp -R skills/nulis ~/.claude/skills/
+```
+
+Atau symlink bila ingin tetap mengikuti pembaruan:
+
+```bash
+ln -s "$PWD/skills/nulis" ~/.claude/skills/nulis
+```
+
+Untuk Claude Desktop, bungkus foldernya jadi `.zip` lalu unggah lewat **Settings → Capabilities → Skills**.
+
+## Prasyarat
+
+Sebagian skill punya skrip Python pembantu. **Semuanya stdlib-only** — tidak ada `pip install`,
+tidak ada virtualenv — dan diuji jalan pada Python 3.9.6 bawaan macOS maupun 3.12.
+
+Skill tetap berfungsi tanpa Python: cakupan sebagian dimensi berkurang, dan skill diminta
+mengatakan itu alih-alih diam. Pandoc opsional, hanya untuk masukan `.docx`.
+
+| Kebutuhan | Untuk apa | Bila tidak ada |
+|---|---|---|
+| Python 3 | sapuan mekanis, gerbang fidelitas, audit PRISMA | dikerjakan manual, cakupan berkurang |
+| pandoc | membaca `.docx` | ekspor naskah ke `.md` atau `.tex` |
+| MCP `scholar`/`zotero` | verifikasi sitasi & deteksi retraksi | jatuh ke `WebSearch`/`WebFetch`, lalu ke penandaan manual |
+| R + `robvis` | figur traffic-light risk of bias | aplikasi web robvis, atau tabel studi × domain |
+
+## Rantai kerja
+
+```
+nulis ──▶ polish-manuscript ──▶ submit ──▶ [keputusan editor] ──▶ revisi
+  ▲                                                                  │
+  └──────────── bila reviewer menuntut RQ/kontribusi berubah ─────────┘
+
+slr-cowork ──▶ (Tahap 9 menghasilkan manuskrip) ──▶ polish-manuscript ──▶ submit
+```
+
+## Lisensi
+
+**[CC BY-NC 4.0](LICENSE)** — Creative Commons Attribution-NonCommercial 4.0 International.
+
+Boleh dipakai, disalin, diubah, dan disebarkan **untuk keperluan non-komersial**, dengan
+mencantumkan atribusi. Pemakaian komersial — termasuk pelatihan berbayar dan produk berbayar —
+memerlukan izin terpisah dari pemegang hak.
+
+Peneliti, mahasiswa, dosen, dan lembaga pendidikan yang memakainya untuk riset dan pengajaran
+tidak perlu meminta izin apa pun; cukup cantumkan sumbernya.
+
+### Atribusi pihak ketiga
+
+Sebagian isi berasal dari pihak ketiga dengan lisensi berbeda — **MIT** dan **CC BY 4.0**. Lihat
+[`NOTICE.md`](NOTICE.md) di akar dan `NOTICE.md` di dalam **setiap** skill; keduanya wajib ikut
+bila Anda menyebarkan ulang.
+
+Instrumen penilaian kualitas (RoB 2, ROBINS-I, AMSTAR 2, MMAT, AXIS) **tidak disalin** ke repo
+ini — yang ada hanya ringkasan kata sendiri dengan sitasi, karena pemeriksaan metadata CrossRef
+menunjukkan ketiganya yang pertama hanya berlisensi *text and data mining* dan dua sisanya tidak
+punya lisensi terdaftar. Unduh formulir resminya dari sumber masing-masing untuk lampiran submisi.
