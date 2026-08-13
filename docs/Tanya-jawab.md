@@ -26,7 +26,8 @@ Kegagalan jaringan **bukan temuan naskah**.
 
 ## Naskah saya bahasa Indonesia. Bisa?
 
-Bisa. Bahasa kerja skill-nya memang Indonesia. Naskah keluarannya mengikuti bahasa jurnal target —
+Bisa. **Bahasa percakapan mengikuti bahasa Anda** — tanya Indonesia, dijawab Indonesia. Bahasa
+naskahnya terpisah dan mengikuti jurnal target —
 biasanya Inggris, dan ada pemeriksaan khusus untuk **kalke bahasa Indonesia** yang sering lolos:
 *"It is known that…"*, *"It can be concluded…"*, `0,05` yang seharusnya `0.05`.
 
@@ -38,6 +39,19 @@ tiga jurnal pendidikan Elsevier menyetorkan **0%**.
 
 `slr-cowork` menyertakan jalur Garuda, Moraref, SINTA, dan repositori PTKIN, serta aturan
 menyatakan keterbatasan cakupan di Limitations.
+
+## Saya bukan penutur bahasa Indonesia. Bisa dipakai?
+
+Bisa, penuh. **Skill membalas dalam bahasa yang Anda pakai bertanya** — tulis dalam bahasa
+Inggris, dijawab bahasa Inggris.
+
+Isi berkas skill-nya memang berbahasa Indonesia, tetapi teks itu **instruksi untuk model**, bukan
+untuk Anda; Claude membacanya dan menjawab dalam bahasa Anda. Anda tidak perlu membacanya sama
+sekali.
+
+Batas nyatanya: **dokumentasi di `docs/` ini berbahasa Indonesia.** Bila Anda ingin membaca
+panduannya — bukan sekadar memakai skill-nya — Anda perlu terjemahan. Ringkasan berbahasa Inggris
+ada di [`README.en.md`](https://github.com/nulis-not-just-writing/skills/blob/main/README.en.md).
 
 ## Boleh dipakai untuk pelatihan berbayar?
 

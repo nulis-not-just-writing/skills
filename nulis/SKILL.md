@@ -3,7 +3,7 @@ name: nulis
 description: Coaching menulis artikel jurnal berstandar Q1 (Scopus/WoS) — menyusun draft per section (Title s.d. Conclusion), memeriksa/audit draft, dan menjaga benang merah antar section. Berbasis move structures (CARS Swales, Hyland 5-move), reporting guidelines (APA JARS, COREQ/SRQR, GRAMMS, CONSORT/PRISMA), dan konvensi per bidang (matematika teorema-bukti, engineering/CS, natural sciences, social sciences, humaniora) serta per jenis riset (kuantitatif, kualitatif, mixed methods). Gunakan saat user ingin menulis, menyusun outline, mengembangkan section, atau mengaudit struktur naskah artikel jurnal. Untuk memoles prosa naskah jadi gunakan polish-manuscript; untuk gerbang pra-submisi (desk rejection) gunakan submit; untuk arsitektur cerita figur gunakan paper-narrative.
 metadata:
   author: Mubaroq ADB | RPI
-  version: 1.3.0
+  version: 1.4.0
 ---
 
 # nulis — Coaching Artikel Jurnal Q1
@@ -60,7 +60,7 @@ Perbaiki bagian yang ditunjuk dengan referensi section + phrasebank. Untuk pemol
 - **Satu konsep satu istilah** dari Abstract sampai Conclusion.
 - **Sitasi nyata saja** — jangan pernah mengarang referensi, dan verifikasi setiap sitasi dengan alat yang benar-benar tersedia: MCP `scholar`/`zotero` bila terpasang, kalau tidak `WebSearch`/`WebFetch` (resolusikan DOI, cocokkan judul-penulis-tahun-jurnal), kalau keduanya tak ada tandai **"BELUM TERVERIFIKASI"** dan minta user memeriksa. Tangga lengkapnya di `ai-stylometry-flags.md` §5.
 - **Hindari penanda gaya AI generatif** — variasikan ritme kalimat, pakai istilah bidang yang presisi (bukan kata umum megah seperti *delve/robust/pivotal*), buang boilerplate. Detail di `ai-stylometry-flags.md`.
-- Bahasa kerja dengan user: Indonesia; bahasa naskah: sesuai target jurnal (umumnya Inggris).
+- **Bahasa kerja mengikuti bahasa yang dipakai user** — balas dalam bahasa yang ia pakai bertanya. Bila belum jelas, Indonesia. Ini soal bahasa percakapan saja; seluruh aturan metodologis di skill ini berlaku sama untuk bahasa apa pun. **Bahasa naskah** mengikuti target jurnal (umumnya Inggris), terlepas dari bahasa percakapannya.
 - Ekspektasi penerbit sebagai **default kasar saja** (Elsevier: 3.000–6.000 kata, 3–5 figur, 30–50 referensi; Introduction bukan literature survey mendetail). Begitu jurnal target diketahui, **author guidelines-nya yang berlaku** — batas kata, jumlah figur, dan jumlah referensi berbeda antar jurnal dalam satu penerbit yang sama. Jangan menegakkan angka di atas melawan guidelines yang sudah dibaca.
 
 ## Rantai skill menulis

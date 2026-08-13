@@ -4,7 +4,9 @@ Lima skill untuk menulis, memoles, menyubmit, dan merevisi artikel jurnal bersta
 (Scopus/WoS) — plus satu untuk menjalankan *systematic literature review* dari nol sampai
 manuskrip siap kirim.
 
-Bahasa kerjanya Indonesia. Naskah keluarannya mengikuti bahasa jurnal target.
+**Bahasa kerjanya mengikuti bahasa Anda** — tanya dalam bahasa Indonesia, dijawab Indonesia;
+tanya dalam bahasa Inggris, dijawab Inggris. Bahasa naskahnya sendiri mengikuti jurnal target,
+terlepas dari bahasa percakapan.
 
 ## Skill mana yang saya butuhkan?
 
@@ -37,7 +39,8 @@ yang sesuai. Kalibrasinya nyata, bukan basa-basi:
   komputer sering IDBRC; humaniora kerap *essay-style*. Tidak ada yang dipaksa.
 - **Standar pelaporan.** Mengikuti jenis riset, bukan bidang: CONSORT, PRISMA, COREQ, SRQR,
   GRAMMS, APA JARS — dipilihkan sesuai desain yang Anda pakai.
-- **Bahasa naskah** mengikuti jurnal target; bahasa kerjanya Indonesia.
+- **Bahasa.** Percakapan mengikuti bahasa Anda; naskah mengikuti jurnal target. Keduanya
+  terpisah — Anda bisa berdiskusi dalam bahasa Indonesia untuk naskah berbahasa Inggris.
 
 Untuk korpus non-Inggris, jalur pencarian dan penilaian mutunya disesuaikan alih-alih dipaksakan
 — lihat [slr-cowork](slr-cowork.md) dan [Tanya jawab](Tanya-jawab.md).

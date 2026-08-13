@@ -1,8 +1,14 @@
 # Skills penulisan artikel jurnal untuk Claude
 
+*[Read this in English](README.en.md)*
+
 Lima skill Claude untuk menulis, memoles, menyubmit, dan merevisi artikel jurnal berstandar
 Q1 (Scopus/WoS) — plus satu untuk menjalankan *systematic literature review* dari nol sampai
-manuskrip. Bahasa kerja Indonesia; naskah keluarannya mengikuti bahasa jurnal target.
+manuskrip.
+
+**Bahasa kerjanya mengikuti bahasa Anda** — tanya dalam bahasa Indonesia, dijawab Indonesia;
+tanya dalam bahasa Inggris, dijawab Inggris. Bahasa naskahnya sendiri mengikuti jurnal target,
+terlepas dari bahasa percakapan.
 
 **Bidang apa pun, jenis riset apa pun.** Yang berbeda antar bidang bukan langkahnya melainkan
 konvensinya — dan skill ini memilih konvensi yang tepat alih-alih menyeragamkan. Kekuatan klaim,
@@ -13,11 +19,11 @@ bukan hukum alam, dan naskah matematika tidak dipaksa mengikuti pola naskah biol
 
 | Skill | Menjawab | Versi |
 |---|---|---|
-| [`nulis`](nulis/) | apakah tiap section punya *move* yang benar, dan apakah RQ terlacak dari gap sampai kontribusi? | 1.3.0 |
-| [`polish-manuscript`](polish-manuscript/) | apakah kalimatnya jelas, argumennya kokoh, klaimnya terkalibrasi? | 1.3.0 |
-| [`submit`](submit/) | apakah naskah lolos sepuluh menit pertama editor, atau dipulangkan sebelum direview? | 1.4.0 |
-| [`revisi`](revisi/) | apakah tiap butir komentar reviewer terjawab, dan bisakah editor menemukan perubahannya? | 1.2.0 |
-| [`slr-cowork`](slr-cowork/) | apakah tinjauan sistematisnya dapat direkonsiliasi angkanya dan dipertahankan metodenya? | 1.4.0 |
+| [`nulis`](nulis/) | apakah tiap section punya *move* yang benar, dan apakah RQ terlacak dari gap sampai kontribusi? | 1.4.0 |
+| [`polish-manuscript`](polish-manuscript/) | apakah kalimatnya jelas, argumennya kokoh, klaimnya terkalibrasi? | 1.4.0 |
+| [`submit`](submit/) | apakah naskah lolos sepuluh menit pertama editor, atau dipulangkan sebelum direview? | 1.5.0 |
+| [`revisi`](revisi/) | apakah tiap butir komentar reviewer terjawab, dan bisakah editor menemukan perubahannya? | 1.3.0 |
+| [`slr-cowork`](slr-cowork/) | apakah tinjauan sistematisnya dapat direkonsiliasi angkanya dan dipertahankan metodenya? | 1.5.0 |
 
 ## Dokumentasi
 
@@ -45,13 +51,11 @@ melewatinya.
 **Claude Desktop** — unduh zip yang Anda mau dari [`dist/`](dist/), lalu unggah lewat
 **Settings → Capabilities → Skills**. Tidak perlu git.
 
-| Zip | Versi |
-|---|---|
-| [`nulis-1.3.0.zip`](dist/nulis-1.3.0.zip) | 1.3.0 |
-| [`polish-manuscript-1.3.0.zip`](dist/polish-manuscript-1.3.0.zip) | 1.3.0 |
-| [`submit-1.4.0.zip`](dist/submit-1.4.0.zip) | 1.4.0 |
-| [`revisi-1.2.0.zip`](dist/revisi-1.2.0.zip) | 1.2.0 |
-| [`slr-cowork-1.4.0.zip`](dist/slr-cowork-1.4.0.zip) | 1.4.0 |
+- [`nulis-1.4.0.zip`](dist/nulis-1.4.0.zip)
+- [`polish-manuscript-1.4.0.zip`](dist/polish-manuscript-1.4.0.zip)
+- [`submit-1.5.0.zip`](dist/submit-1.5.0.zip)
+- [`revisi-1.3.0.zip`](dist/revisi-1.3.0.zip)
+- [`slr-cowork-1.5.0.zip`](dist/slr-cowork-1.5.0.zip)
 
 **Claude Code** — salin foldernya:
 

@@ -3,7 +3,7 @@ name: slr-cowork
 description: Panduan menjalankan Systematic Literature Review (SLR) end-to-end bersama user — dari perumusan research question, search strategy, data mining Scopus/multi-DB, screening title-abstract dan full-text dual-reviewer, extraction + quality assessment, analysis + synthesis (narrative, thematic synthesis/QES, atau meta-analysis) + GRADE/GRADE-CERQual, opsional bibliometric SLNA/VOSviewer, sampai penulisan manuskrip PRISMA 2020-compliant berikut diagram alirnya. Mencakup korpus doktrinal-normatif (hukum, fikih, filsafat) yang tidak cocok dengan PICO. Gunakan saat user menyebut SLR, systematic review, systematic literature review, tinjauan pustaka sistematis, PRISMA, diagram alir PRISMA, PICO/SPIDER, screening artikel, ekstraksi data studi, Cohen's kappa antar-reviewer, sintesis bukti, thematic synthesis, meta-etnografi, GRADE, CERQual, PROSPERO, atau meminta bantuan menyusun review sistematis untuk jurnal bereputasi. Untuk analisis tematik atas data primer (wawancara/FGD) gunakan nulis, bukan skill ini.
 metadata:
   author: Mubaroq ADB | RPI
-  version: 1.4.0
+  version: 1.5.0
 ---
 
 # SLR Cowork — Systematic Literature Review End-to-End
@@ -13,8 +13,12 @@ menjalankan SLR dari nol sampai manuskrip siap submit ke jurnal bereputasi (Scop
 User adalah pemilik keputusan ilmiah; Anda mengeksekusi prosedur, menyiapkan artefak,
 menghitung, mengaudit, dan menahan user dari jalan pintas yang akan ditolak reviewer.
 
-Bahasa kerja default: **Indonesia**. Manuskrip final: ikuti bahasa target jurnal
-(biasanya Inggris) — tanyakan sekali di awal Tahap 9.
+**Bahasa kerja mengikuti bahasa yang dipakai user** — balas dalam bahasa yang ia pakai
+bertanya; bila belum jelas, Indonesia. Ini soal bahasa percakapan dan artefak kerja saja.
+Seluruh aturan metodologis, gerbang, dan ambang di skill ini berlaku sama untuk bahasa apa pun.
+
+Manuskrip final: ikuti bahasa target jurnal (biasanya Inggris) — tanyakan sekali di awal Tahap 9,
+terlepas dari bahasa percakapannya.
 
 ---
 

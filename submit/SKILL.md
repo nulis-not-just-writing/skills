@@ -3,7 +3,7 @@ name: submit
 description: Sapu naskah pra-submisi untuk risiko desk rejection — penolakan oleh editor sebelum naskah sampai ke reviewer. Gunakan saat user hendak submit artikel ke jurnal (Scopus/WoS), bertanya apakah naskahnya siap submit, bertanya kenapa naskahnya ditolak tanpa direview, memilih atau mengganti jurnal target, atau menyiapkan paket submisi (cover letter, highlights, pernyataan etik, anonimisasi double-blind). Berjalan sebagai gerbang bertahap - kecocokan scope, jenis artikel dan batas, pernyataan wajib, integritas (duplicate submission, salami slicing, preprint, disclosure AI), anonimitas, kesan sepuluh menit editor pada judul-abstrak-figur, konsistensi internal (sitasi versus daftar pustaka, angka abstrak versus hasil, sisa TODO dan tracked changes), kepatuhan author guidelines, dan kesehatan daftar pustaka - lalu berhenti di temuan fatal alih-alih melaporkan semuanya sekaligus. Untuk pemolesan prosa gunakan polish-manuscript; untuk struktur move per section gunakan nulis.
 metadata:
   author: Mubaroq ADB | RPI
-  version: 1.4.0
+  version: 1.5.0
 ---
 
 # submit — Gerbang Pra-Submisi
@@ -13,6 +13,8 @@ naskah dikirim ke reviewer, dalam pembacaan sekitar sepuluh menit, dan mengenai 
 naskah masuk di jurnal bereputasi. Sebagian besar kriterianya **tidak menyentuh mutu
 ilmiah** — naskah bagus rutin dipulangkan karena scope-nya meleset atau pernyataan
 etiknya kosong.
+
+**Bahasa kerja mengikuti bahasa yang dipakai user** — balas dalam bahasa yang ia pakai bertanya; bila belum jelas, Indonesia. Ini soal bahasa percakapan saja: seluruh aturan, gerbang, dan ambang di skill ini berlaku sama untuk bahasa apa pun. **Bahasa naskah** mengikuti target jurnal, terlepas dari bahasa percakapannya.
 
 ## Ini gerbang, bukan sapuan mutu
 

@@ -3,7 +3,7 @@ name: revisi
 description: Kerjakan revisi naskah jurnal setelah keputusan editor - membaca surat keputusan, membongkar komentar reviewer menjadi butir yang bisa dilacak, memutuskan mana yang dikerjakan dan mana yang ditolak, menulis surat tanggapan (response to reviewers), dan memeriksa kelengkapannya sebelum dikirim balik. Gunakan saat user menerima major/minor revision, reject and resubmit, atau penolakan yang ingin dibanding; saat user bertanya bagaimana menjawab komentar reviewer, bagaimana menolak permintaan reviewer tanpa terdengar defensif, apa yang harus dilakukan bila dua reviewer bertentangan, atau apakah surat tanggapannya sudah lengkap. Untuk pemolesan prosa teks baru gunakan polish-manuscript; untuk perombakan struktur section gunakan nulis; untuk gerbang pra-submisi naskah baru gunakan submit.
 metadata:
   author: Mubaroq ADB | RPI
-  version: 1.2.0
+  version: 1.3.0
 ---
 
 # revisi — Menjawab Reviewer
@@ -13,6 +13,8 @@ ke tahap ini sudah lolos desk rejection dan sudah dinilai layak diperbaiki; seba
 besar akhirnya terbit. Yang gagal umumnya gagal bukan karena revisinya kurang, melainkan
 karena **surat tanggapannya** — butir yang terlewat, penolakan yang terdengar
 membangkang, atau perubahan yang tidak bisa ditemukan editor.
+
+**Bahasa kerja mengikuti bahasa yang dipakai user** — balas dalam bahasa yang ia pakai bertanya; bila belum jelas, Indonesia. Ini soal bahasa percakapan saja: seluruh aturan, gerbang, dan ambang di skill ini berlaku sama untuk bahasa apa pun. **Bahasa naskah** mengikuti target jurnal, terlepas dari bahasa percakapannya.
 
 ## Bentuk kerjanya: docket, bukan sapuan
 
