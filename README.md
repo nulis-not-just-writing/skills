@@ -4,11 +4,10 @@ Lima skill Claude untuk menulis, memoles, menyubmit, dan merevisi artikel jurnal
 Q1 (Scopus/WoS) — plus satu untuk menjalankan *systematic literature review* dari nol sampai
 manuskrip. Bahasa kerja Indonesia; naskah keluarannya mengikuti bahasa jurnal target.
 
-**Lintas bidang** — matematika & ilmu formal, engineering & ilmu komputer, natural & life
-sciences, social sciences, humaniora — dan **lintas jenis riset**: kuantitatif, kualitatif, mixed
-methods, analisis tematik. Konvensi tiap bidang berbeda, dan skill ini tidak menyeragamkannya:
-natural sciences paling berani memakai *boosters*, matematika paling hemat, humaniora paling
-banyak *hedging*, dan matematika murni tidak dipaksa ke struktur IMRaD.
+**Bidang apa pun, jenis riset apa pun.** Yang berbeda antar bidang bukan langkahnya melainkan
+konvensinya — dan skill ini memilih konvensi yang tepat alih-alih menyeragamkan. Kekuatan klaim,
+struktur section, dan standar pelaporan dikalibrasi sesuai bidang dan desain riset Anda: IMRaD
+bukan hukum alam, dan naskah matematika tidak dipaksa mengikuti pola naskah biologi.
 
 ## Skill
 

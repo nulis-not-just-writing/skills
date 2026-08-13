@@ -24,25 +24,23 @@ Belum yakin? Lihat **[Alur kerja](Alur-kerja.md)** — bagaimana kelimanya salin
 
 ## Cakupan
 
-Lintas bidang dan lintas jenis riset. Konvensi tiap bidang berbeda, dan skill ini **tidak
-menyeragamkannya**.
+**Bidang apa pun, jenis riset apa pun.** Yang berbeda antar bidang bukan langkahnya, melainkan
+konvensinya — dan skill ini **memilih konvensi yang tepat alih-alih menyeragamkan**.
 
-| Bidang | Jenis riset |
-|---|---|
-| matematika & ilmu formal | kuantitatif |
-| engineering & ilmu komputer | kualitatif |
-| natural & life sciences | mixed methods |
-| social sciences | analisis tematik |
-| humaniora | |
+Langkah pertama di tiap sesi adalah menanyakan bidang dan jenis riset Anda, lalu memuat konvensi
+yang sesuai. Kalibrasinya nyata, bukan basa-basi:
 
-Contoh konkret perbedaannya: natural sciences paling berani memakai *boosters* (*show*,
-*demonstrate*); matematika dan physical sciences paling hemat; humaniora paling banyak *hedging*.
-Matematika murni **tidak dipaksa** ke struktur IMRaD — strukturnya mengikuti konvensi
-teorema-bukti.
+- **Kekuatan klaim.** Natural dan life sciences paling berani memakai *boosters* (*show*,
+  *demonstrate*); matematika dan physical sciences paling hemat; humaniora paling banyak
+  *hedging*. Menyeragamkannya membuat naskah terbaca salah kamar.
+- **Struktur.** IMRaD bukan hukum alam. Matematika murni memakai konvensi teorema-bukti; ilmu
+  komputer sering IDBRC; humaniora kerap *essay-style*. Tidak ada yang dipaksa.
+- **Standar pelaporan.** Mengikuti jenis riset, bukan bidang: CONSORT, PRISMA, COREQ, SRQR,
+  GRAMMS, APA JARS — dipilihkan sesuai desain yang Anda pakai.
+- **Bahasa naskah** mengikuti jurnal target; bahasa kerjanya Indonesia.
 
-Bahasa naskah mengikuti jurnal target. Untuk korpus non-Inggris, jalur pencarian dan penilaian
-mutunya disesuaikan alih-alih dipaksakan — lihat [slr-cowork](slr-cowork.md) dan
-[Tanya jawab](Tanya-jawab.md).
+Untuk korpus non-Inggris, jalur pencarian dan penilaian mutunya disesuaikan alih-alih dipaksakan
+— lihat [slr-cowork](slr-cowork.md) dan [Tanya jawab](Tanya-jawab.md).
 
 ## Yang membedakannya
 
