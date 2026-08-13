@@ -6,13 +6,29 @@ Dua cara, tergantung Anda memakai Claude yang mana.
 
 ## Claude Desktop — paling mudah, tanpa git
 
-1. Buka [folder `dist/`](https://github.com/nulis-not-just-writing/skills/tree/main/dist) di repo
-2. Unduh zip skill yang Anda mau (mis. `nulis-1.3.0.zip`)
-3. Di Claude Desktop: **Settings → Capabilities → Skills → Upload**
-4. Pilih zip-nya
+**Belum yakin punya Claude yang mana?** Kalau Anda memakai Claude lewat peramban atau aplikasi
+desktop, bagian inilah yang Anda butuhkan. Kalau Anda mengetik `claude` di terminal, langsung ke
+[Claude Code](#claude-code--salin-atau-symlink).
 
-Selesai. Skill akan aktif sendiri ketika Anda menyebut hal yang relevan — tidak perlu memanggil
-namanya.
+1. **Unduh** skill yang Anda mau. Tiap tautan langsung menyimpan berkasnya ke komputer Anda:
+
+   | Skill | Untuk apa | Unduh |
+   |---|---|---|
+   | `nulis` | struktur artikel | [nulis-1.4.0.zip](https://github.com/nulis-not-just-writing/skills/raw/main/dist/nulis-1.4.0.zip) |
+   | `polish-manuscript` | prosa & mekanik | [polish-manuscript-1.4.0.zip](https://github.com/nulis-not-just-writing/skills/raw/main/dist/polish-manuscript-1.4.0.zip) |
+   | `submit` | gerbang pra-submisi | [submit-1.5.0.zip](https://github.com/nulis-not-just-writing/skills/raw/main/dist/submit-1.5.0.zip) |
+   | `revisi` | setelah keputusan editor | [revisi-1.3.0.zip](https://github.com/nulis-not-just-writing/skills/raw/main/dist/revisi-1.3.0.zip) |
+   | `slr-cowork` | tinjauan sistematis | [slr-cowork-1.5.0.zip](https://github.com/nulis-not-just-writing/skills/raw/main/dist/slr-cowork-1.5.0.zip) |
+
+   **Jangan di-*unzip*.** Claude Desktop meminta berkas `.zip`-nya persis seperti yang diunduh.
+
+2. Buka Claude Desktop → **Settings** → **Capabilities** → **Skills**
+3. Klik **Upload**
+4. Pilih berkas `.zip` yang barusan Anda unduh
+
+Selesai. **Anda tidak perlu memanggil skill-nya** — ia aktif sendiri ketika Anda menyebut hal yang
+relevan. Coba *"saya mau mulai menulis artikel dari data survei ini"*, dan `nulis` semestinya
+menyala.
 
 > Nama zip memuat versi. Kalau nanti ada pembaruan, nama berkasnya berbeda — jadi Anda selalu
 > tahu versi mana yang terpasang.

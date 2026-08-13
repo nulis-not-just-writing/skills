@@ -9,6 +9,10 @@ submission-ready manuscript.
 **They work in your language** — ask in English, get English; ask in Indonesian, get Indonesian.
 The manuscript's own language follows the target journal, independently of the conversation.
 
+> **Just want to get started?** Download a skill and upload it to Claude Desktop —
+> **[Installation](Installation.md)** has the direct download links and four numbered steps.
+> No git, no terminal.
+
 ## Which one do I need?
 
 Start from where you are, not from the skill names.

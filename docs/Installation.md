@@ -6,13 +6,28 @@ Two ways, depending on which Claude you use.
 
 ## Claude Desktop — easiest, no git
 
-1. Open the [`dist/` folder](https://github.com/nulis-not-just-writing/skills/tree/main/dist) in the repo
-2. Download the skill zip you want (e.g. `nulis-1.4.0.zip`)
-3. In Claude Desktop: **Settings → Capabilities → Skills → Upload**
-4. Select the zip
+**Not sure which Claude you have?** If you use Claude in a browser or a desktop application, this
+is your section. If you type `claude` into a terminal, skip to [Claude Code](#claude-code--copy-or-symlink).
 
-Done. The skill activates by itself when you mention something relevant — you never call it by
-name.
+1. **Download** the skill you want. Each link saves the file straight to your computer:
+
+   | Skill | What it does | Download |
+   |---|---|---|
+   | `nulis` | article structure | [nulis-1.4.0.zip](https://github.com/nulis-not-just-writing/skills/raw/main/dist/nulis-1.4.0.zip) |
+   | `polish-manuscript` | prose & mechanics | [polish-manuscript-1.4.0.zip](https://github.com/nulis-not-just-writing/skills/raw/main/dist/polish-manuscript-1.4.0.zip) |
+   | `submit` | pre-submission gate | [submit-1.5.0.zip](https://github.com/nulis-not-just-writing/skills/raw/main/dist/submit-1.5.0.zip) |
+   | `revisi` | after the editor's decision | [revisi-1.3.0.zip](https://github.com/nulis-not-just-writing/skills/raw/main/dist/revisi-1.3.0.zip) |
+   | `slr-cowork` | systematic review | [slr-cowork-1.5.0.zip](https://github.com/nulis-not-just-writing/skills/raw/main/dist/slr-cowork-1.5.0.zip) |
+
+   **Do not unzip it.** Claude Desktop wants the `.zip` exactly as downloaded.
+
+2. Open Claude Desktop → **Settings** → **Capabilities** → **Skills**
+3. Click **Upload**
+4. Choose the `.zip` you just downloaded
+
+Done. **You never call the skill by name** — it activates on its own when you mention something
+relevant. Try *"I want to start writing an article from this survey data"* and `nulis` should wake
+up.
 
 > The zip filename carries the version. When an update lands, the filename differs — so you always
 > know which version you have installed.

@@ -13,6 +13,10 @@ terlepas dari bahasa percakapan.
 Dokumentasi ini tersedia dua bahasa: halaman Inggris di [`docs/`](../README.md), Indonesia di
 folder ini.
 
+> **Ingin langsung mulai?** Unduh skill-nya lalu unggah ke Claude Desktop —
+> **[Pemasangan](Pemasangan.md)** memuat tautan unduh langsung dan empat langkah bernomor.
+> Tanpa git, tanpa terminal.
+
 ## Skill mana yang saya butuhkan?
 
 Mulai dari keadaan Anda sekarang, bukan dari nama skill-nya.
