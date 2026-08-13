@@ -114,10 +114,20 @@ cat > "$W/_Sidebar.md" <<EOF
 - [Lisensi](ID-Lisensi)
 EOF
 
+# Footer muncul di SETIAP halaman wiki, jadi kata penutupnya cukup ditulis
+# sekali di sini — tidak perlu disalin ke tiap halaman.
 cat > "$W/_Footer.md" <<EOF
-Mirror of \`docs/\` — do not edit here; edit in the
-[repository]($TREE/docs). · Cerminan \`docs/\`, jangan disunting di sini.
-CC BY-NC 4.0 · Mubaroq ADB | RPI
+---
+
+> **Knowledge unshared dies. Knowledge shared keeps living.**
+>
+> It grows in hands you will never meet and is carried on in work you will never read — and what
+> never stops living never stops returning to you.
+
+**Mubaroq ADB** · Akademi Digital Bandung | RPI Institute · <mubaroq@digitalbdg.ac.id>
+
+<sub>Mirror of \`docs/\` — do not edit here; edit in the [repository]($TREE/docs). ·
+Cerminan \`docs/\`, jangan disunting di sini. · CC BY-NC 4.0</sub>
 EOF
 
 # ── Gerbang: tidak boleh ada tautan yang pasti mati di wiki ────────────
