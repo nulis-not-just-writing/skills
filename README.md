@@ -18,6 +18,16 @@ PICO, dan sering hanya satu peneliti yang mengerjakan.
 | [`revisi`](revisi/) | apakah tiap butir komentar reviewer terjawab, dan bisakah editor menemukan perubahannya? | 1.2.0 |
 | [`slr-cowork`](slr-cowork/) | apakah tinjauan sistematisnya dapat direkonsiliasi angkanya dan dipertahankan metodenya? | 1.4.0 |
 
+## Dokumentasi
+
+Panduan lengkap ada di **[`docs/`](docs/)** — pemasangan, alur kerja, prasyarat, satu halaman per
+skill, dan tanya jawab. Mulai dari [`docs/README.md`](docs/README.md) bila belum tahu skill mana
+yang Anda butuhkan.
+
+Isi yang sama dicerminkan ke [Wiki](https://github.com/nulis-not-just-writing/skills/wiki).
+**`docs/` adalah sumbernya** — ia ikut versi bersama skill yang dijelaskannya; wiki disegarkan
+dengan `./sync-wiki.sh`.
+
 ## Berdiri sendiri atau berdampingan
 
 **Setiap skill berfungsi penuh sendirian.** Bila tetangganya terpasang, sebagian langkah jadi
