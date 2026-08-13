@@ -24,8 +24,8 @@ Belum yakin? Lihat **[Alur kerja](Alur-kerja.md)** — bagaimana kelimanya salin
 
 ## Cakupan
 
-Lintas bidang dan lintas jenis riset — konvensinya berbeda-beda, dan skill ini **tidak
-menyeragamkan**.
+Lintas bidang dan lintas jenis riset. Konvensi tiap bidang berbeda, dan skill ini **tidak
+menyeragamkannya**.
 
 | Bidang | Jenis riset |
 |---|---|
@@ -40,38 +40,36 @@ Contoh konkret perbedaannya: natural sciences paling berani memakai *boosters* (
 Matematika murni **tidak dipaksa** ke struktur IMRaD — strukturnya mengikuti konvensi
 teorema-bukti.
 
-## Empat keadaan yang biasanya ditangani buruk panduan generik
+Bahasa naskah mengikuti jurnal target. Untuk korpus non-Inggris, jalur pencarian dan penilaian
+mutunya disesuaikan alih-alih dipaksakan — lihat [slr-cowork](slr-cowork.md) dan
+[Tanya jawab](Tanya-jawab.md).
 
-Ini yang membedakannya dari panduan berbahasa Inggris yang diterjemahkan apa adanya.
+## Yang membedakannya
 
-**Korpus non-Inggris.** Scopus dan WoS berdaya cakup rendah untuk literatur berbahasa Indonesia
-dan Arab. Skill menyertakan jalur Garuda, Moraref, SINTA, DOAJ, dan repositori PTKIN — plus aturan
-menyatakan keterbatasan cakupan di Limitations alih-alih menyembunyikannya.
+**Gerbang yang berhenti, bukan daftar yang panjang.** `submit` berjalan berurutan dari yang
+termurah dan paling mematikan. Satu temuan fatal membuat sisanya tidak relevan: ia berhenti,
+melaporkan, dan tidak lanjut menyisir. Percuma memoles tanda hubung pada naskah yang scope-nya
+salah jurnal.
 
-**Riset doktrinal-normatif.** Kajian hukum, fikih, filsafat, dan telaah teks tidak punya padanan
-Population–Intervention–Outcome. Sebagian besar instrumen SLR lahir dari epidemiologi klinis dan
-**tidak punya objek** di sana. Yang tidak berlaku adalah *instrumennya*, bukan tahapnya — ada
-kerangka pengganti PICO dan rubrik appraisal berbasis kualitas argumentasi.
+**Yang bisa dihitung, dihitung.** Akronim, ejaan, nilai p, satuan, batas kata, silang sitasi
+dua arah, aritmetika kaskade PRISMA — semuanya dikerjakan skrip deterministik yang bisa Anda
+jalankan ulang, bukan dinilai dari kesan.
 
-**Metadata penerbit yang berbeda perilaku.** Pengukuran 12 Agustus 2026: tiga jurnal pendidikan
-Elsevier menyetorkan abstrak ke Crossref pada **0%** record, sementara lima jurnal Indonesia
-berbasis OJS pada **92–100%**. Jalur pencarian yang benar berlawanan arah antar bidang, dan skill
-menyebutkan perintah untuk mengukur ulang sendiri.
+**Sitasi tidak pernah dikarang.** Verifikasi berjenjang: MCP bila ada, lalu resolusi DOI, lalu
+penandaan eksplisit **"belum terverifikasi"**. Yang tidak boleh dilanggar di ketiga tingkat:
+sitasi tidak pernah dianggap benar karena "terlihat masuk akal" — kombinasi penulis-tahun-jurnal
+yang tampak wajar justru pola khas sitasi karangan.
 
-**Peneliti tunggal.** Tanpa tim, tanpa asisten. `slr-cowork` menyediakan empat konfigurasi
-penyaring beserta **nama yang jujur** untuk angka kesepakatan masing-masing — termasuk opsi AI
-sebagai pass kedua, yang didukung pernyataan sikap bersama Cochrane, Campbell, JBI, dan CEE.
+**Penyuntingan tidak boleh menghilangkan bukti.** `polish-manuscript` punya gerbang fidelitas:
+tiap angka dan tiap sitasi yang ada sebelum penyuntingan **wajib** masih ada sesudahnya. Bila
+hilang, bagian itu dikembalikan dan dilaporkan — bukan diperbaiki diam-diam.
 
-## Tiga janji
+**Langkah yang tak bisa dijalankan tidak dianggap lolos.** Skrip gagal jalan dilaporkan sebagai
+langkah yang dilewati, bukan sebagai "naskah bermasalah". Keduanya tidak pernah dicampur dalam
+satu tabel temuan — dan skill diminta menyebutkan apa yang dilewati, bukan mendiamkannya.
 
-**Berdiri sendiri.** Tiap skill berfungsi penuh sendirian. Bila tetangganya terpasang, sebagian
+**Tiap skill berdiri sendiri.** Berfungsi penuh sendirian. Bila tetangganya terpasang, sebagian
 langkah jadi lebih dalam — tetapi tidak ada yang macet karena skill lain tidak ada.
-
-**Tidak diam-diam melewati.** Langkah yang tak bisa dijalankan **tidak dianggap lolos**. Skill
-diminta mengatakan apa adanya bahwa langkah itu di luar jangkauan.
-
-**Tidak mengarang.** Sitasi, DOI, angka, dan isi sel ekstraksi tidak pernah diisi dari ingatan.
-Yang belum terverifikasi ditandai "belum terverifikasi", bukan ditebak.
 
 ---
 
