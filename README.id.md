@@ -76,32 +76,43 @@ melewatinya.
 
 ## Pasang
 
-**Claude Desktop** — unduh zip yang Anda mau dari [`dist/`](dist/), lalu unggah lewat
-**Settings → Capabilities → Skills**. Tidak perlu git.
+**Belum yakin punya yang mana?** Kalau Anda memakai Claude lewat peramban atau aplikasi desktop,
+yang Anda butuhkan **Claude Desktop**. Kalau Anda mengetik `claude` di terminal, itu **Claude
+Code**.
 
-- [`nulis-1.4.0.zip`](dist/nulis-1.4.0.zip)
-- [`polish-manuscript-1.4.0.zip`](dist/polish-manuscript-1.4.0.zip)
-- [`submit-1.5.0.zip`](dist/submit-1.5.0.zip)
-- [`revisi-1.3.0.zip`](dist/revisi-1.3.0.zip)
-- [`slr-cowork-1.5.0.zip`](dist/slr-cowork-1.5.0.zip)
+### Claude Desktop — tanpa git, tanpa terminal
 
-**Claude Code** — salin foldernya:
+1. **Unduh** skill yang Anda mau. Tiap tautan langsung menyimpan berkasnya ke komputer Anda:
+
+   | Skill | Untuk apa | Unduh |
+   |---|---|---|
+   | `nulis` | struktur artikel | [nulis-1.4.0.zip](https://github.com/nulis-not-just-writing/skills/raw/main/dist/nulis-1.4.0.zip) |
+   | `polish-manuscript` | prosa & mekanik | [polish-manuscript-1.4.0.zip](https://github.com/nulis-not-just-writing/skills/raw/main/dist/polish-manuscript-1.4.0.zip) |
+   | `submit` | gerbang pra-submisi | [submit-1.5.0.zip](https://github.com/nulis-not-just-writing/skills/raw/main/dist/submit-1.5.0.zip) |
+   | `revisi` | setelah keputusan editor | [revisi-1.3.0.zip](https://github.com/nulis-not-just-writing/skills/raw/main/dist/revisi-1.3.0.zip) |
+   | `slr-cowork` | tinjauan sistematis | [slr-cowork-1.5.0.zip](https://github.com/nulis-not-just-writing/skills/raw/main/dist/slr-cowork-1.5.0.zip) |
+
+   Jangan di-*unzip*. Claude Desktop meminta berkas `.zip`-nya apa adanya.
+
+2. Buka Claude Desktop → **Settings** → **Capabilities** → **Skills**
+3. Klik **Upload**, lalu pilih berkas yang barusan Anda unduh
+4. Selesai.
+
+**Anda tidak perlu memanggil skill-nya.** Ia aktif sendiri ketika Anda menyebut hal yang relevan —
+coba *"saya mau mulai menulis artikel dari data survei ini"*, dan `nulis` semestinya menyala.
+
+Pasang yang Anda perlukan saja; tiap skill berdiri sendiri. Rincian langkah demi langkah, termasuk
+cara memperbarui dan mencopot, ada di [docs/id/Pemasangan.md](docs/id/Pemasangan.md).
+
+### Claude Code — untuk terminal
 
 ```bash
 git clone https://github.com/nulis-not-just-writing/skills.git
-cp -R skills/nulis ~/.claude/skills/
+cd skills
+cp -R nulis polish-manuscript submit revisi slr-cowork ~/.claude/skills/
 ```
 
-Atau symlink bila ingin tetap mengikuti pembaruan:
-
-```bash
-ln -s "$PWD/skills/nulis" ~/.claude/skills/nulis
-```
-
-> Nama zip memuat versi supaya sebuah berkas tidak pernah "basi" — versi baru menghasilkan
-> berkas baru, bukan menimpa yang lama. Bangun ulang dengan `./build-zips.sh` setelah menaikkan
-> versi; skripnya menolak menghasilkan zip yang kehilangan `NOTICE.md` atau membawa berkas sampah.
-
+Pasang yang Anda perlukan saja — kelimanya berdiri sendiri.
 ## Prasyarat
 
 Sebagian skill punya skrip Python pembantu. **Semuanya stdlib-only** — tidak ada `pip install`,

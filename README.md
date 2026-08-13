@@ -69,10 +69,34 @@ never need to read it.
 
 ## Install
 
-**Claude Desktop** — download a zip from [`dist/`](dist/), then
-**Settings → Capabilities → Skills → Upload**. No git needed.
+**Not sure which one you have?** If you use Claude in a browser or a desktop application, you want
+**Claude Desktop**. If you type `claude` into a terminal, you want **Claude Code**.
 
-**Claude Code:**
+### Claude Desktop — no git, no terminal
+
+1. **Download** the skill you want. Each link saves the file straight to your computer:
+
+   | Skill | What it does | Download |
+   |---|---|---|
+   | `nulis` | article structure | [nulis-1.4.0.zip](https://github.com/nulis-not-just-writing/skills/raw/main/dist/nulis-1.4.0.zip) |
+   | `polish-manuscript` | prose & mechanics | [polish-manuscript-1.4.0.zip](https://github.com/nulis-not-just-writing/skills/raw/main/dist/polish-manuscript-1.4.0.zip) |
+   | `submit` | pre-submission gate | [submit-1.5.0.zip](https://github.com/nulis-not-just-writing/skills/raw/main/dist/submit-1.5.0.zip) |
+   | `revisi` | after the editor's decision | [revisi-1.3.0.zip](https://github.com/nulis-not-just-writing/skills/raw/main/dist/revisi-1.3.0.zip) |
+   | `slr-cowork` | systematic review | [slr-cowork-1.5.0.zip](https://github.com/nulis-not-just-writing/skills/raw/main/dist/slr-cowork-1.5.0.zip) |
+
+   Do not unzip it. Claude Desktop wants the `.zip` as it is.
+
+2. Open Claude Desktop → **Settings** → **Capabilities** → **Skills**
+3. Click **Upload** and choose the file you just downloaded
+4. Done.
+
+**You never call the skill by name.** It activates on its own when you mention something relevant
+— try *"I want to start writing an article from this survey data"* and `nulis` should wake up.
+
+Install only what you need; each skill works on its own. Step-by-step detail, including how to
+update and uninstall, is in [docs/Installation.md](docs/Installation.md).
+
+### Claude Code — for the terminal
 
 ```bash
 git clone https://github.com/nulis-not-just-writing/skills.git
@@ -80,7 +104,6 @@ cp -R skills/nulis ~/.claude/skills/
 ```
 
 Install only what you need — each skill works standalone.
-
 ## What makes them different
 
 **Gates that stop, not lists that sprawl.** `submit` runs in order from cheapest and most lethal.

@@ -55,13 +55,19 @@ echo
 gagal=0
 for s in "${SKILLS[@]}"; do
   v=$(grep -m1 '^  version:' "$s/SKILL.md" | awk '{print $2}')
-  for doc in "docs/$s.md" "docs/id/$s.md"; do
+  for doc in "docs/$s.md" "docs/id/$s.md" README.md README.id.md; do
     [ -f "$doc" ] || { echo "  ✗ $doc tidak ada"; gagal=1; continue; }
-    dv=$(grep -m1 -oE '\*\*v[0-9]+\.[0-9]+\.[0-9]+\*\*' "$doc" | tr -d '*v')
-    if [ "$dv" != "$v" ]; then
-      echo "  ✗ $doc menyebut v$dv, SKILL.md v$v"
-      gagal=1
-    fi
+    # README menautkan zip tanpa menulis "**vX.Y.Z**"; halaman docs menulis keduanya.
+    case "$doc" in
+      README*) ;;
+      *)
+        dv=$(grep -m1 -oE '\*\*v[0-9]+\.[0-9]+\.[0-9]+\*\*' "$doc" | tr -d '*v')
+        if [ "$dv" != "$v" ]; then
+          echo "  ✗ $doc menyebut v$dv, SKILL.md v$v"
+          gagal=1
+        fi
+        ;;
+    esac
     # tautan unduhnya harus menunjuk zip yang benar-benar ada
     if ! grep -q "dist/$s-$v.zip" "$doc"; then
       echo "  ✗ $doc tidak menautkan dist/$s-$v.zip"
@@ -74,7 +80,7 @@ if [ "$gagal" -ne 0 ]; then
   echo "  Dokumentasi tidak sinkron dengan versi skill — perbaiki sebelum commit."
   exit 1
 fi
-echo "  ✓ docs/ dan docs/id/ menyebut versi yang sama dengan SKILL.md"
+echo "  ✓ docs/, docs/id/, dan kedua README menautkan zip versi terkini"
 
 echo
 echo "  Selesai. Commit isi dist/ agar pengguna bisa mengunduh langsung."
