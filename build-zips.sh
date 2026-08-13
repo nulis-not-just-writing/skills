@@ -47,5 +47,34 @@ for s in "${SKILLS[@]}"; do
   printf "  ✓ %-32s v%-8s %2s berkas  %s\n" "$(basename "$out")" "$v" "$n" "$(du -h "$out" | cut -f1)"
 done
 
+# ── Gerbang: halaman docs harus menyebut versi yang sama ──────────────────
+# Versi pernah dinaikkan di SKILL.md + dist/ tanpa menyentuh docs/, sehingga
+# tautan unduh di dokumentasi menunjuk zip yang sudah tidak ada dan menjawab 404.
+# Angka di dokumentasi tidak boleh jadi salinan manual yang bisa basi diam-diam.
+echo
+gagal=0
+for s in "${SKILLS[@]}"; do
+  v=$(grep -m1 '^  version:' "$s/SKILL.md" | awk '{print $2}')
+  for doc in "docs/$s.md" "docs/id/$s.md"; do
+    [ -f "$doc" ] || { echo "  ✗ $doc tidak ada"; gagal=1; continue; }
+    dv=$(grep -m1 -oE '\*\*v[0-9]+\.[0-9]+\.[0-9]+\*\*' "$doc" | tr -d '*v')
+    if [ "$dv" != "$v" ]; then
+      echo "  ✗ $doc menyebut v$dv, SKILL.md v$v"
+      gagal=1
+    fi
+    # tautan unduhnya harus menunjuk zip yang benar-benar ada
+    if ! grep -q "dist/$s-$v.zip" "$doc"; then
+      echo "  ✗ $doc tidak menautkan dist/$s-$v.zip"
+      gagal=1
+    fi
+  done
+done
+if [ "$gagal" -ne 0 ]; then
+  echo
+  echo "  Dokumentasi tidak sinkron dengan versi skill — perbaiki sebelum commit."
+  exit 1
+fi
+echo "  ✓ docs/ dan docs/id/ menyebut versi yang sama dengan SKILL.md"
+
 echo
 echo "  Selesai. Commit isi dist/ agar pengguna bisa mengunduh langsung."

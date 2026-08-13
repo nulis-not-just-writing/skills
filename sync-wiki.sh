@@ -1,29 +1,45 @@
 #!/usr/bin/env bash
-# Cerminkan docs/ ke GitHub Wiki.
+# Cerminkan docs/ ke GitHub Wiki, dua bahasa.
 #
 # docs/ adalah SUMBER KANONIK — ia ikut versi bersama skill yang dijelaskannya.
 # Wiki hanyalah cerminan. Jangan pernah menyunting wiki langsung: perubahannya
 # akan tertimpa saat sinkronisasi berikutnya.
 #
-# Perbedaan yang ditangani skrip ini:
-#   docs/README.md        →  Home.md          (beranda wiki)
-#   [teks](Nama.md)       →  [teks](Nama)     (wiki tanpa ekstensi)
-#   _Sidebar / _Footer    →  dibangkitkan     (khusus wiki)
+# Pemetaan halaman:
+#   docs/README.md        →  Home            docs/id/README.md       →  ID-Beranda
+#   docs/Installation.md  →  Installation    docs/id/Pemasangan.md   →  ID-Pemasangan
+#   docs/Workflow.md      →  Workflow        docs/id/Alur-kerja.md   →  ID-Alur-kerja
+#   docs/Requirements.md  →  Requirements    docs/id/Prasyarat.md    →  ID-Prasyarat
+#   docs/FAQ.md           →  FAQ             docs/id/Tanya-jawab.md  →  ID-Tanya-jawab
+#   docs/Licence.md       →  Licence         docs/id/Lisensi.md      →  ID-Lisensi
+#   docs/<skill>.md       →  <skill>         docs/id/<skill>.md      →  ID-<skill>
+#
+# Wiki TIDAK berada di dalam pohon repo, jadi tautan relatif ke luar docs/ pasti
+# mati kalau dibiarkan. Tiga kelas tautan ditulis ulang: sesama halaman docs jadi
+# nama halaman wiki, lintas bahasa jadi nama pasangannya, dan tautan ke berkas
+# repo jadi URL absolut.
+#
+# Arti "../" bergantung kedalaman berkas sumbernya: di docs/ menunjuk akar repo,
+# di docs/id/ menunjuk docs/. Kedua folder diproses dengan aturan terpisah.
 #
 # Prasyarat sekali seumur repo: wiki harus sudah punya minimal satu halaman.
 # GitHub baru membuat repo wiki setelah halaman pertama dibuat lewat antarmuka
-# web — tidak ada API-nya. Buka .../wiki → "Create the first page" → Save.
+# web — tidak ada API-nya.
 
 set -euo pipefail
 cd "$(dirname "$0")"
 
-REMOTE="https://github.com/nulis-not-just-writing/skills.wiki.git"
+SLUG="nulis-not-just-writing/skills"
+REMOTE="https://github.com/$SLUG.wiki.git"
+BLOB="https://github.com/$SLUG/blob/main"
+TREE="https://github.com/$SLUG/tree/main"
+
 WORK=$(mktemp -d)
 trap 'rm -rf "$WORK"' EXIT
 
 if ! git clone -q "$REMOTE" "$WORK/wiki" 2>/dev/null; then
   echo "✗ Repo wiki belum ada."
-  echo "  Buka https://github.com/nulis-not-just-writing/skills/wiki"
+  echo "  Buka https://github.com/$SLUG/wiki"
   echo "  → 'Create the first page' → isi apa saja → Save Page."
   echo "  Lalu jalankan skrip ini lagi."
   exit 1
@@ -32,47 +48,97 @@ fi
 W="$WORK/wiki"
 find "$W" -maxdepth 1 -name '*.md' -delete
 
+# ── Halaman Inggris (docs/*.md) ────────────────────────────────────────
 for src in docs/*.md; do
   base=$(basename "$src")
   [ "$base" = "README.md" ] && dst="$W/Home.md" || dst="$W/$base"
-  # buang ekstensi .md dari tautan internal; README.md → Home
-  sed -E 's/\]\(README\.md\)/](Home)/g; s/\]\(([A-Za-z0-9_-]+)\.md\)/](\1)/g' "$src" > "$dst"
+  sed -E "
+    s#\]\(\.\./([^)]*/)\)#](${TREE}/\1)#g
+    s#\]\(\.\./([^)]+)\)#](${BLOB}/\1)#g
+    s#\]\(id/README\.md\)#](ID-Beranda)#g
+    s#\]\(id/([A-Za-z0-9_-]+)\.md\)#](ID-\1)#g
+    s#\]\(README\.md\)#](Home)#g
+    s#\]\(([A-Za-z0-9_-]+)\.md\)#](\1)#g
+  " "$src" > "$dst"
 done
 
-cat > "$W/_Sidebar.md" <<'EOF'
-**[Beranda](Home)**
+# ── Halaman Indonesia (docs/id/*.md) ───────────────────────────────────
+for src in docs/id/*.md; do
+  base=$(basename "$src")
+  case "$base" in
+    README.md) dst="$W/ID-Beranda.md" ;;
+    *)         dst="$W/ID-${base}" ;;
+  esac
+  sed -E "
+    s#\]\(\.\./\.\./([^)]*/)\)#](${TREE}/\1)#g
+    s#\]\(\.\./\.\./([^)]+)\)#](${BLOB}/\1)#g
+    s#\]\(\.\./README\.md\)#](Home)#g
+    s#\]\(\.\./([A-Za-z0-9_-]+)\.md\)#](\1)#g
+    s#\]\(README\.md\)#](ID-Beranda)#g
+    s#\]\(([A-Za-z0-9_-]+)\.md\)#](ID-\1)#g
+  " "$src" > "$dst"
+done
 
-**Mulai**
-- [Pemasangan](Pemasangan)
-- [Alur kerja](Alur-kerja)
-- [Prasyarat](Prasyarat)
+# ── Sidebar & footer ───────────────────────────────────────────────────
+cat > "$W/_Sidebar.md" <<EOF
+**[Home](Home)** · [Bahasa Indonesia](ID-Beranda)
 
-**Skill**
+**Start**
+- [Installation](Installation)
+- [Workflow](Workflow)
+- [Requirements](Requirements)
+
+**Skills**
 - [nulis](nulis)
 - [polish-manuscript](polish-manuscript)
 - [submit](submit)
 - [revisi](revisi)
 - [slr-cowork](slr-cowork)
 
-**Lain**
-- [Tanya jawab](Tanya-jawab)
-- [Lisensi](Lisensi)
+**More**
+- [FAQ](FAQ)
+- [Licence](Licence)
+
+---
+
+**[Bahasa Indonesia](ID-Beranda)**
+- [Pemasangan](ID-Pemasangan)
+- [Alur kerja](ID-Alur-kerja)
+- [Prasyarat](ID-Prasyarat)
+- [nulis](ID-nulis)
+- [polish-manuscript](ID-polish-manuscript)
+- [submit](ID-submit)
+- [revisi](ID-revisi)
+- [slr-cowork](ID-slr-cowork)
+- [Tanya jawab](ID-Tanya-jawab)
+- [Lisensi](ID-Lisensi)
 EOF
 
-cat > "$W/_Footer.md" <<'EOF'
-Cerminan dari `docs/` — jangan disunting di sini, suntinglah di
-[repo](https://github.com/nulis-not-just-writing/skills/tree/main/docs).
+cat > "$W/_Footer.md" <<EOF
+Mirror of \`docs/\` — do not edit here; edit in the
+[repository]($TREE/docs). · Cerminan \`docs/\`, jangan disunting di sini.
 CC BY-NC 4.0 · Mubaroq ADB | RPI
 EOF
 
+# ── Gerbang: tidak boleh ada tautan yang pasti mati di wiki ────────────
+sisa=$(grep -rlE '\]\((\.\./|[A-Za-z0-9_-]+\.md\))' "$W" 2>/dev/null || true)
+if [ -n "$sisa" ]; then
+  echo "✗ Masih ada tautan relatif/berekstensi yang akan mati di wiki:"
+  for f in $sisa; do
+    printf '  %s\n' "$(basename "$f")"
+    grep -oE '\]\((\.\./[^)]*|[A-Za-z0-9_-]+\.md)\)' "$f" | sed 's/^/     /' | sort -u
+  done
+  exit 1
+fi
+
 cd "$W"
-if git diff --quiet && git diff --cached --quiet && [ -z "$(git status --porcelain)" ]; then
+if [ -z "$(git status --porcelain)" ]; then
   echo "  Tidak ada perubahan — wiki sudah sama dengan docs/."
   exit 0
 fi
 
 git add -A
 git -c user.name="Mubaroq ADB" -c user.email="isma@upi.edu" \
-    commit -q -m "Segarkan dari docs/ (cerminan otomatis)"
+    commit -q -m "Segarkan dari docs/ (cerminan otomatis, dua bahasa)"
 git push -q origin HEAD
 echo "  ✓ Wiki disegarkan: $(ls *.md | wc -l | tr -d ' ') halaman"

@@ -1,5 +1,7 @@
 # Pemasangan
 
+*[Read this in English](../Installation.md)*
+
 Dua cara, tergantung Anda memakai Claude yang mana.
 
 ## Claude Desktop — paling mudah, tanpa git

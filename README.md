@@ -1,122 +1,141 @@
-# Skills penulisan artikel jurnal untuk Claude
+# Claude skills for journal article writing
 
-*[Read this in English](README.en.md)*
+*[Baca dalam bahasa Indonesia](README.id.md)*
 
-Lima skill Claude untuk menulis, memoles, menyubmit, dan merevisi artikel jurnal berstandar
-Q1 (Scopus/WoS) — plus satu untuk menjalankan *systematic literature review* dari nol sampai
-manuskrip.
+Five Claude skills for writing, polishing, submitting, and revising journal articles at Q1
+(Scopus/WoS) standard — plus one for running a systematic literature review end to end.
 
-**Bahasa kerjanya mengikuti bahasa Anda** — tanya dalam bahasa Indonesia, dijawab Indonesia;
-tanya dalam bahasa Inggris, dijawab Inggris. Bahasa naskahnya sendiri mengikuti jurnal target,
-terlepas dari bahasa percakapan.
+**Any field, any research design.** What differs between fields is not the workflow but the
+convention, and these skills pick the right convention instead of flattening everything: claim
+strength, section structure, and reporting standard are calibrated to your field and design.
+IMRaD is not a law of nature, and a mathematics paper is not forced into the shape of a biology
+paper.
 
-**Bidang apa pun, jenis riset apa pun.** Yang berbeda antar bidang bukan langkahnya melainkan
-konvensinya — dan skill ini memilih konvensi yang tepat alih-alih menyeragamkan. Kekuatan klaim,
-struktur section, dan standar pelaporan dikalibrasi sesuai bidang dan desain riset Anda: IMRaD
-bukan hukum alam, dan naskah matematika tidak dipaksa mengikuti pola naskah biologi.
+## The skills
 
-## Skill
-
-| Skill | Menjawab | Versi |
+| Skill | Answers | Version |
 |---|---|---|
-| [`nulis`](nulis/) | apakah tiap section punya *move* yang benar, dan apakah RQ terlacak dari gap sampai kontribusi? | 1.4.0 |
-| [`polish-manuscript`](polish-manuscript/) | apakah kalimatnya jelas, argumennya kokoh, klaimnya terkalibrasi? | 1.4.0 |
-| [`submit`](submit/) | apakah naskah lolos sepuluh menit pertama editor, atau dipulangkan sebelum direview? | 1.5.0 |
-| [`revisi`](revisi/) | apakah tiap butir komentar reviewer terjawab, dan bisakah editor menemukan perubahannya? | 1.3.0 |
-| [`slr-cowork`](slr-cowork/) | apakah tinjauan sistematisnya dapat direkonsiliasi angkanya dan dipertahankan metodenya? | 1.5.0 |
+| [`nulis`](nulis/) | does each section carry the right *moves*, and is every RQ traceable from gap to contribution? | 1.4.0 |
+| [`polish-manuscript`](polish-manuscript/) | is the prose clear, the argument sound, the claims calibrated? | 1.4.0 |
+| [`submit`](submit/) | will this survive the editor's first ten minutes, or come back before review? | 1.5.0 |
+| [`revisi`](revisi/) | is every reviewer comment answered, and can the editor *find* each change? | 1.3.0 |
+| [`slr-cowork`](slr-cowork/) | do the numbers reconcile and will the method hold up? | 1.5.0 |
 
-## Dokumentasi
+## What each one does
 
-Panduan lengkap ada di **[`docs/`](docs/)** — pemasangan, alur kerja, prasyarat, satu halaman per
-skill, dan tanya jawab. Mulai dari [`docs/README.md`](docs/README.md) bila belum tahu skill mana
-yang Anda butuhkan.
+**[`nulis`](nulis/)** — *structure*. Coaching built on genre analysis: it guides you move by move,
+maps gap → RQ → design → results → contribution as one line per RQ running through five sections,
+and calibrates how boldly claims may be stated for your field. Four modes: outline, draft a
+section, audit an existing draft, refine a passage.
 
-Isi yang sama dicerminkan ke [Wiki](https://github.com/nulis-not-just-writing/skills/wiki).
-**`docs/` adalah sumbernya** — ia ikut versi bersama skill yang dijelaskannya; wiki disegarkan
-dengan `./sync-wiki.sh`.
+**[`polish-manuscript`](polish-manuscript/)** — *prose*. A ten-dimension audit of a draft whose
+structure is already sound. Its distinguishing feature is a **fidelity gate**: every number and
+citation present before editing must still be present after, or the passage is reverted and
+reported.
 
-## Berdiri sendiri atau berdampingan
+**[`submit`](submit/)** — *the gate*. Sweeps for desk rejection risk, which affects 40–70% of
+submissions and mostly has nothing to do with scientific quality. It runs cheapest-and-most-lethal
+first and **stops at the first fatal finding**.
 
-**Setiap skill berfungsi penuh sendirian.** Bila tetangganya terpasang, sebagian langkah jadi
-lebih dalam — tetapi tidak ada langkah yang macet karena tetangganya tidak ada. Tiap SKILL.md
-memuat bagian *"Berdiri sendiri atau berdampingan"* dengan tabel: apa yang bertambah bila skill
-lain ada, dan apa jalan keluarnya bila tidak.
+**[`revisi`](revisi/)** — *after the decision*. Breaks reviewer comments into trackable items,
+decides each on its merits rather than by vote count, and writes a response letter that only
+claims changes that actually exist — and tells the editor where to find them.
 
-Satu aturan berlaku di kelimanya: **langkah yang tidak bisa dijalankan tidak dianggap lolos.**
-Skill diminta mengatakan apa adanya bahwa langkah itu di luar jangkauan, bukan diam-diam
-melewatinya.
+**[`slr-cowork`](slr-cowork/)** — *systematic review*. Nine stages from an agreement form to a
+PRISMA 2020 manuscript, with gates that catch unanswerable questions early and arithmetic that has
+to reconcile. Handles doctrinal-normative corpora where clinical instruments have no object.
 
-## Pasang
+Full pages for each, with worked scenarios, are in [`docs/`](docs/README.md).
 
-**Claude Desktop** — unduh zip yang Anda mau dari [`dist/`](dist/), lalu unggah lewat
-**Settings → Capabilities → Skills**. Tidak perlu git.
+## Documentation
 
-- [`nulis-1.4.0.zip`](dist/nulis-1.4.0.zip)
-- [`polish-manuscript-1.4.0.zip`](dist/polish-manuscript-1.4.0.zip)
-- [`submit-1.5.0.zip`](dist/submit-1.5.0.zip)
-- [`revisi-1.3.0.zip`](dist/revisi-1.3.0.zip)
-- [`slr-cowork-1.5.0.zip`](dist/slr-cowork-1.5.0.zip)
+Complete guides live in [`docs/`](docs/README.md) — [installation](docs/Installation.md),
+[workflow](docs/Workflow.md), [requirements](docs/Requirements.md), one page per skill, and an
+[FAQ](docs/FAQ.md). Indonesian versions of the same pages are in [`docs/id/`](docs/id/README.md),
+kept in step with the English ones.
 
-**Claude Code** — salin foldernya:
+The same content is mirrored to the
+[Wiki](https://github.com/nulis-not-just-writing/skills/wiki), both languages. **`docs/` is the
+source** — it is versioned alongside the skills it describes; the wiki is regenerated with
+`./sync-wiki.sh` and should never be edited directly.
+
+## A note on language
+
+**The skills reply in whatever language you write in.** Ask in English, get English.
+
+The one thing still in Indonesian is the **content of the skill files themselves**. That text is
+instruction *to the model*, not to you — Claude reads it and answers you in your language. You
+never need to read it.
+
+## Install
+
+**Claude Desktop** — download a zip from [`dist/`](dist/), then
+**Settings → Capabilities → Skills → Upload**. No git needed.
+
+**Claude Code:**
 
 ```bash
 git clone https://github.com/nulis-not-just-writing/skills.git
 cp -R skills/nulis ~/.claude/skills/
 ```
 
-Atau symlink bila ingin tetap mengikuti pembaruan:
+Install only what you need — each skill works standalone.
 
-```bash
-ln -s "$PWD/skills/nulis" ~/.claude/skills/nulis
-```
+## What makes them different
 
-> Nama zip memuat versi supaya sebuah berkas tidak pernah "basi" — versi baru menghasilkan
-> berkas baru, bukan menimpa yang lama. Bangun ulang dengan `./build-zips.sh` setelah menaikkan
-> versi; skripnya menolak menghasilkan zip yang kehilangan `NOTICE.md` atau membawa berkas sampah.
+**Gates that stop, not lists that sprawl.** `submit` runs in order from cheapest and most lethal.
+One fatal finding makes the rest irrelevant: it stops, reports, and does not carry on sweeping.
+No point polishing hyphens in a manuscript aimed at the wrong journal.
 
-## Prasyarat
+**What can be counted is counted.** Acronyms, spelling, p-values, units, word limits, two-way
+citation cross-checks, PRISMA cascade arithmetic — all handled by deterministic scripts you can
+re-run, not judged by impression.
 
-Sebagian skill punya skrip Python pembantu. **Semuanya stdlib-only** — tidak ada `pip install`,
-tidak ada virtualenv — dan diuji jalan pada Python 3.9.6 bawaan macOS maupun 3.12.
+**Citations are never invented.** A tiered ladder: MCP tools if present, then DOI resolution, then
+an explicit **"unverified"** flag. The rule that holds at all three tiers: a citation is never
+accepted because it *looks plausible* — a plausible-looking author-year-journal combination is the
+signature pattern of a fabricated reference.
 
-Skill tetap berfungsi tanpa Python: cakupan sebagian dimensi berkurang, dan skill diminta
-mengatakan itu alih-alih diam. Pandoc opsional, hanya untuk masukan `.docx`.
+**Editing must not destroy evidence.** `polish-manuscript` has a fidelity gate: every number and
+every citation present before editing **must** still be present after. If one goes missing, that
+passage is reverted and reported — not quietly patched.
 
-| Kebutuhan | Untuk apa | Bila tidak ada |
+**A step that cannot run is not counted as passed.** A script that fails to execute is reported as
+a skipped step, never as "a problem with the manuscript". The two are never mixed in one findings
+table.
+
+**Each skill stands alone.** Fully functional on its own. If a neighbour is installed, some steps
+go deeper — but nothing stalls because another skill is absent.
+
+## Requirements
+
+Nothing is mandatory. All five work without any of the tools below; what shrinks is speed and
+traceability, not rigour — and the skill is required to *say* what it skipped.
+
+| Tool | Used for | Without it |
 |---|---|---|
-| Python 3 | sapuan mekanis, gerbang fidelitas, audit PRISMA | dikerjakan manual, cakupan berkurang |
-| pandoc | membaca `.docx` | ekspor naskah ke `.md` atau `.tex` |
-| MCP `scholar`/`zotero` | verifikasi sitasi & deteksi retraksi | jatuh ke `WebSearch`/`WebFetch`, lalu ke penandaan manual |
-| R + `robvis` | figur traffic-light risk of bias | aplikasi web robvis, atau tabel studi × domain |
+| Python 3 | mechanical sweeps, fidelity gate, PRISMA audits | done manually, reduced coverage |
+| pandoc | reading `.docx` | export to `.md` or `.tex` |
+| MCP `scholar`/`zotero` | citation verification + retraction detection | falls back to web lookup, then explicit flagging |
+| R + `robvis` | risk-of-bias traffic-light figures | robvis web app, or a study × domain table |
 
-## Rantai kerja
+Every Python script is **stdlib-only** — no `pip install`, no virtualenv — and tested on both the
+macOS system Python 3.9.6 and 3.12.
 
-```
-nulis ──▶ polish-manuscript ──▶ submit ──▶ [keputusan editor] ──▶ revisi
-  ▲                                                                  │
-  └──────────── bila reviewer menuntut RQ/kontribusi berubah ─────────┘
+## Licence
 
-slr-cowork ──▶ (Tahap 9 menghasilkan manuskrip) ──▶ polish-manuscript ──▶ submit
-```
+**[CC BY-NC 4.0](LICENSE)**. Free to use, copy, adapt, and share **for non-commercial purposes**
+with attribution. Commercial use — including paid training and paid products — needs separate
+permission from the rights holder.
 
-## Lisensi
+Researchers, students, lecturers, and educational institutions using these for research and
+teaching need no permission at all; just credit the source.
 
-**[CC BY-NC 4.0](LICENSE)** — Creative Commons Attribution-NonCommercial 4.0 International.
+Some content comes from third parties under different licences (MIT, CC BY 4.0). See
+[`NOTICE.md`](NOTICE.md) at the root **and inside every skill** — both must travel with any
+redistribution.
 
-Boleh dipakai, disalin, diubah, dan disebarkan **untuk keperluan non-komersial**, dengan
-mencantumkan atribusi. Pemakaian komersial — termasuk pelatihan berbayar dan produk berbayar —
-memerlukan izin terpisah dari pemegang hak.
-
-Peneliti, mahasiswa, dosen, dan lembaga pendidikan yang memakainya untuk riset dan pengajaran
-tidak perlu meminta izin apa pun; cukup cantumkan sumbernya.
-
-### Atribusi pihak ketiga
-
-Sebagian isi berasal dari pihak ketiga dengan lisensi berbeda — **MIT** dan **CC BY 4.0**. Lihat
-[`NOTICE.md`](NOTICE.md) di akar dan `NOTICE.md` di dalam **setiap** skill; keduanya wajib ikut
-bila Anda menyebarkan ulang.
-
-Instrumen penilaian kualitas (RoB 2, ROBINS-I, AMSTAR 2, MMAT, AXIS) **tidak disalin** ke repo
-ini — yang ada hanya ringkasan kata sendiri dengan sitasi, karena pemeriksaan metadata CrossRef
-menunjukkan ketiganya yang pertama hanya berlisensi *text and data mining* dan dua sisanya tidak
-punya lisensi terdaftar. Unduh formulir resminya dari sumber masing-masing untuk lampiran submisi.
+Quality-assessment instruments (RoB 2, ROBINS-I, AMSTAR 2, MMAT, AXIS) are **not reproduced** here
+— only own-words summaries with citations, because a CrossRef metadata check showed the first
+three carry only a text-and-data-mining licence and the other two have no registered licence at
+all. Download the official forms from their own sources for submission appendices.

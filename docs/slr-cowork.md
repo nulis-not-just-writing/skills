@@ -1,69 +1,104 @@
 # slr-cowork — systematic literature review
 
-**v1.4.0** · [unduh zip](https://github.com/nulis-not-just-writing/skills/raw/main/dist/slr-cowork-1.4.0.zip)
+*[Baca dalam bahasa Indonesia](id/slr-cowork.md)*
 
-Mendampingi SLR dari nol sampai manuskrip siap submit. Bertindak sebagai **metodolog systematic
-review senior**: Anda pemilik keputusan ilmiah, skill ini mengeksekusi prosedur, menghitung,
-mengaudit, dan menahan Anda dari jalan pintas yang akan ditolak reviewer.
+**v1.5.0** · [download zip](https://github.com/nulis-not-just-writing/skills/raw/main/dist/slr-cowork-1.5.0.zip)
 
-## Kapan dipakai
+Accompanies an SLR from nothing to a submission-ready manuscript. It acts as a **senior systematic
+review methodologist**: you own the scientific decisions, the skill executes the procedure, counts,
+audits, and holds you back from shortcuts a reviewer will reject.
 
-- Mau menulis tinjauan sistematis, scoping-nya belum jelas
-- Sudah jalan tapi angkanya tidak rekonsiliasi
-- Reviewer bilang metodenya tidak dapat dipertahankan
-- Korpusnya **doktrinal-normatif** — hukum, fikih, filsafat — dan PICO terasa tidak pas
+## What it is actually for
 
-## Sembilan tahap
+### 1. You want to write a systematic review and have no idea where to start
 
-1. Fondasi & **form kesepakatan** — rujukan tunggal seluruh proyek
-2. Research question — gerbang: *apakah pertanyaannya dapat dijawab SLR?*
+> *"I want to do a systematic review on project-based learning in vocational education."*
+
+Stage 1 produces a **working agreement form** — the single reference point for the whole project:
+the question, inclusion and exclusion criteria with their legend, the databases, and who assesses
+what. Every later stage reads that form, so decisions cannot drift quietly mid-project.
+
+Stage 2 has a gate that stops you before you get far: **can this question actually be answered by
+an SLR?** If your title demands a first-order normative claim — *"formulating an ideal model"* —
+while an SLR can only produce a second-order mapping, that mismatch will not surface until the
+manuscript is being written.
+
+### 2. Your numbers do not reconcile
+
+A PRISMA flow diagram demands arithmetic that holds from identification through inclusion. The
+numbers in the abstract, the text, and the figure must agree.
+
+This skill freezes the corpus, reconciles ID sets between stages, and audits the cascade.
+Discrepancies are reported as conflicts for you to settle — not patched to look tidy.
+
+### 3. Your corpus is doctrinal-normative and the standard instruments do not fit
+
+Law, Islamic jurisprudence, philosophy. Most SLR instruments came out of clinical epidemiology and
+**have no object** there — no population, no intervention, no outcome measure.
+
+What does not apply is the **instrument**, not the stage. There is a PICO replacement framework,
+rules on primary-source status (fatwas, regulations, and rulings **do not enter the PRISMA count**),
+and an appraisal rubric based on argumentation quality.
+
+### 4. You are a lone researcher and need a second screener
+
+The agreement form offers **option (d)**: an AI tool as the second pass. This is legitimate, and
+supported by the joint position statement of Cochrane, Campbell, JBI, and CEE — under three
+conditions: it is documented, **every row is human-confirmed**, and it is **named correctly**.
+
+The figure is *human–AI agreement*, **not** *inter-screener agreement*. The second term asserts two
+independent human assessors; if what you have is one human plus one tool, that claim collapses the
+moment an editor asks for per-screener logs.
+
+`reference/rujukan-ai-screening.md` carries the published references that justify it, the caveats
+that **must be cited alongside**, and ready-to-adapt Methods and Limitations paragraphs.
+
+## When to use it
+
+- You want to write a systematic review but the scoping is not clear yet
+- You are underway but the numbers do not reconcile
+- A reviewer said the method is indefensible
+- Your corpus is **doctrinal-normative** — law, jurisprudence, philosophy — and PICO feels wrong
+
+## Nine stages
+
+1. Foundations & **agreement form** — the single reference for the whole project
+2. Research question — gate: *can this question be answered by an SLR?*
 3. Search strategy
 4. Data mining & export
-5. Screening judul-abstrak
-6. Akuisisi & screening teks lengkap
-7. Ekstraksi & quality assessment
-8. Analisis & sintesis (+ opsional SLNA/bibliometrik)
-9. Penulisan manuskrip PRISMA 2020
+5. Title–abstract screening
+6. Full-text acquisition & screening
+7. Extraction & quality assessment
+8. Analysis & synthesis (+ optional SLNA/bibliometrics)
+9. PRISMA 2020 manuscript writing
 
-## Yang membuatnya berbeda
+## What sets it apart
 
-**Korpus doktrinal ditangani sungguhan.** Sebagian besar instrumen SLR lahir dari epidemiologi
-klinis dan **tidak punya objek** pada kajian hukum atau fikih. Yang tidak berlaku adalah
-*instrumennya*, bukan tahapnya — ada kerangka pengganti PICO, aturan status sumber primer (fatwa,
-regulasi, putusan **tidak masuk hitungan PRISMA**), dan rubrik appraisal berbasis kualitas
-argumentasi.
+**Doctrinal corpora are handled properly.** See above — the instruments are replaced, the stages
+are not.
 
-**Gerbang pembuka Tahap 2 menangkap kegagalan yang tak terdeteksi gerbang lain.** Bila judul Anda
-menuntut **klaim normatif orde pertama** ("merumuskan model ideal"), sementara SLR hanya sanggup
-menghasilkan **pemetaan orde kedua**, itu ketidaksepadanan yang tidak akan ketahuan sampai
-manuskrip ditulis.
+**The Stage 2 opening gate catches a failure no other gate detects.** A first-order normative claim
+demanded by the title, against the second-order mapping an SLR can deliver, is a mismatch that
+stays invisible until writing begins.
 
-**Ukuran korpus mengikuti kriteria, bukan target.** Tidak ada ambang minimum di standar mana pun.
-Bahkan review dengan **nol** studi (*empty review*) adalah hasil sah dan diterbitkan — 376 dari
-4.320 review aktif CDSR. Melonggarkan kriteria demi memperbanyak studi mengubah pertanyaan riset
-demi angka, dan itu terbaca reviewer.
+**Corpus size follows the criteria, not a target.** No standard sets a minimum. Even a review with
+**zero** studies (an *empty review*) is a legitimate, publishable result — 376 of 4,320 active
+CDSR reviews. Loosening criteria to gather more studies changes the research question for the sake
+of a number, and reviewers read that.
 
-## AI sebagai penyaring kedua
+## Thirteen reference files
 
-Bila Anda peneliti tunggal, form kesepakatan menyediakan **opsi (d)**: perkakas AI sebagai pass
-kedua. Sah, dan didukung pernyataan sikap bersama Cochrane, Campbell, JBI, dan CEE — dengan tiga
-syarat: terdokumentasi, **tiap baris dikonfirmasi manusia**, dan **dinamai dengan benar**.
+Including: the PRISMA 2020 checklist (27 items), the Abstract checklist (12 items, **a separate
+pass**), SWiM for synthesis without meta-analysis, flow diagram guidance, qualitative synthesis
+(Thomas & Harden thematic synthesis + GRADE-CERQual), QA instrument selection, and doctrinal
+review.
 
-Angkanya *human–AI agreement*, **bukan** *inter-screener agreement*. Istilah kedua menyatakan ada
-dua penilai manusia independen; bila yang ada satu manusia plus satu perkakas, pernyataan itu
-runtuh saat editor meminta log per-screener.
+## The rule most often broken
 
-`reference/rujukan-ai-screening.md` memuat rujukan terbit yang membenarkannya, peringatan yang
-**wajib ikut disitir**, serta paragraf Methods dan Limitations siap adaptasi.
+**MMAT, AXIS, and AMSTAR 2 forbid computing a total score.** Scoring each item, summing them, and
+setting a "≥70% = high quality" threshold is **not a simplification but a misuse of the
+instrument** — and methodological reviewers recognise it.
 
-## Tiga belas berkas reference
+---
 
-Termasuk: checklist PRISMA 2020 (27 item), checklist Abstract (12 item, **pass tersendiri**), SWiM
-untuk sintesis tanpa meta-analisis, panduan diagram alir, sintesis kualitatif (thematic synthesis
-Thomas & Harden + GRADE-CERQual), pemilihan instrumen QA, dan review doktrinal.
-
-## Aturan yang paling sering dilanggar
-
-**MMAT, AXIS, dan AMSTAR 2 melarang menghitung skor total.** Memberi angka tiap butir,
-menjumlahkannya, lalu menetapkan ambang "≥70% = kualitas tinggi" **bukan penyederhanaan melainkan
-penyalahgunaan alat** — dan reviewer metodologis mengenalinya.
+[← Back](README.md) · [Installation](Installation.md) · [Workflow](Workflow.md) · [FAQ](FAQ.md)

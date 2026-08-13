@@ -1,5 +1,7 @@
 # Alur kerja
 
+*[Read this in English](../Workflow.md)*
+
 Kelima skill menjawab pertanyaan yang berbeda. Urutannya bukan aturan kaku — tapi melompatinya
 biasanya berarti mengerjakan ulang.
 

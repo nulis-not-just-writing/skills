@@ -1,5 +1,7 @@
 # Prasyarat & lingkungan
 
+*[Read this in English](../Requirements.md)*
+
 **Tidak ada yang wajib.** Kelima skill berfungsi tanpa satu pun perkakas di bawah — yang berkurang
 adalah kecepatan dan keterlacakan, bukan kewajibannya. Skill diminta mengatakan apa yang dilewati,
 bukan diam-diam melewatinya.

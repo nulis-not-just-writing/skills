@@ -1,5 +1,7 @@
 # Tanya jawab
 
+*[Read this in English](../FAQ.md)*
+
 ## Apakah harus memasang kelimanya?
 
 Tidak. **Tiap skill berfungsi penuh sendirian.** Pasang yang Anda perlukan. Bila tetangganya ada,
@@ -45,13 +47,12 @@ menyatakan keterbatasan cakupan di Limitations.
 Bisa, penuh. **Skill membalas dalam bahasa yang Anda pakai bertanya** — tulis dalam bahasa
 Inggris, dijawab bahasa Inggris.
 
-Isi berkas skill-nya memang berbahasa Indonesia, tetapi teks itu **instruksi untuk model**, bukan
-untuk Anda; Claude membacanya dan menjawab dalam bahasa Anda. Anda tidak perlu membacanya sama
-sekali.
+Dokumentasi ini pun tersedia dua bahasa — halaman Inggris ada di
+[`docs/`](../README.md), Indonesia di `docs/id/`.
 
-Batas nyatanya: **dokumentasi di `docs/` ini berbahasa Indonesia.** Bila Anda ingin membaca
-panduannya — bukan sekadar memakai skill-nya — Anda perlu terjemahan. Ringkasan berbahasa Inggris
-ada di [`README.en.md`](https://github.com/nulis-not-just-writing/skills/blob/main/README.en.md).
+Yang masih berbahasa Indonesia hanyalah **isi berkas skill-nya sendiri**. Teks itu **instruksi
+untuk model**, bukan untuk Anda; Claude membacanya lalu menjawab dalam bahasa Anda. Anda tidak
+perlu membacanya sama sekali.
 
 ## Boleh dipakai untuk pelatihan berbayar?
 
