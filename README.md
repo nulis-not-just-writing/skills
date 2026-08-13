@@ -142,7 +142,7 @@ all. Download the official forms from their own sources for submission appendice
 
 ---
 
-> **Knowledge unshared is knowledge dying. Knowledge shared keeps living.**
+> **Knowledge unshared dies. Knowledge shared keeps living.**
 >
 > It grows in hands you will never meet and is carried on in work you will never read — and what
 > never stops living never stops returning to you.
