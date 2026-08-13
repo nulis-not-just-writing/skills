@@ -22,14 +22,45 @@ Mulai dari keadaan Anda sekarang, bukan dari nama skill-nya.
 
 Belum yakin? Lihat **[Alur kerja](Alur-kerja.md)** — bagaimana kelimanya saling menyambung.
 
-## Untuk siapa ini dibuat
+## Cakupan
 
-Ditulis untuk kondisi nyata peneliti Indonesia, bukan disalin dari panduan berbahasa Inggris:
+Lintas bidang dan lintas jenis riset — konvensinya berbeda-beda, dan skill ini **tidak
+menyeragamkan**.
 
-- korpus berbahasa **Indonesia dan Arab**, yang cakupan Scopus/WoS-nya terbatas
-- **kajian keislaman, hukum, dan pendidikan** yang sering tidak cocok dengan kerangka PICO
-- jurnal nasional terindeks yang metadatanya berbeda perilaku dari penerbit komersial
-- **peneliti tunggal** — tanpa tim, tanpa asisten, tanpa akses institusi penuh
+| Bidang | Jenis riset |
+|---|---|
+| matematika & ilmu formal | kuantitatif |
+| engineering & ilmu komputer | kualitatif |
+| natural & life sciences | mixed methods |
+| social sciences | analisis tematik |
+| humaniora | |
+
+Contoh konkret perbedaannya: natural sciences paling berani memakai *boosters* (*show*,
+*demonstrate*); matematika dan physical sciences paling hemat; humaniora paling banyak *hedging*.
+Matematika murni **tidak dipaksa** ke struktur IMRaD — strukturnya mengikuti konvensi
+teorema-bukti.
+
+## Empat keadaan yang biasanya ditangani buruk panduan generik
+
+Ini yang membedakannya dari panduan berbahasa Inggris yang diterjemahkan apa adanya.
+
+**Korpus non-Inggris.** Scopus dan WoS berdaya cakup rendah untuk literatur berbahasa Indonesia
+dan Arab. Skill menyertakan jalur Garuda, Moraref, SINTA, DOAJ, dan repositori PTKIN — plus aturan
+menyatakan keterbatasan cakupan di Limitations alih-alih menyembunyikannya.
+
+**Riset doktrinal-normatif.** Kajian hukum, fikih, filsafat, dan telaah teks tidak punya padanan
+Population–Intervention–Outcome. Sebagian besar instrumen SLR lahir dari epidemiologi klinis dan
+**tidak punya objek** di sana. Yang tidak berlaku adalah *instrumennya*, bukan tahapnya — ada
+kerangka pengganti PICO dan rubrik appraisal berbasis kualitas argumentasi.
+
+**Metadata penerbit yang berbeda perilaku.** Pengukuran 12 Agustus 2026: tiga jurnal pendidikan
+Elsevier menyetorkan abstrak ke Crossref pada **0%** record, sementara lima jurnal Indonesia
+berbasis OJS pada **92–100%**. Jalur pencarian yang benar berlawanan arah antar bidang, dan skill
+menyebutkan perintah untuk mengukur ulang sendiri.
+
+**Peneliti tunggal.** Tanpa tim, tanpa asisten. `slr-cowork` menyediakan empat konfigurasi
+penyaring beserta **nama yang jujur** untuk angka kesepakatan masing-masing — termasuk opsi AI
+sebagai pass kedua, yang didukung pernyataan sikap bersama Cochrane, Campbell, JBI, dan CEE.
 
 ## Tiga janji
 

@@ -4,9 +4,14 @@ Lima skill Claude untuk menulis, memoles, menyubmit, dan merevisi artikel jurnal
 Q1 (Scopus/WoS) — plus satu untuk menjalankan *systematic literature review* dari nol sampai
 manuskrip. Bahasa kerja Indonesia; naskah keluarannya mengikuti bahasa jurnal target.
 
-Ditulis untuk kondisi nyata peneliti Indonesia: korpus berbahasa Indonesia dan Arab, jurnal
-nasional yang cakupan indeksnya terbatas, kajian keislaman dan hukum yang tidak cocok dengan
-PICO, dan sering hanya satu peneliti yang mengerjakan.
+**Lintas bidang** — matematika, engineering & ilmu komputer, natural & life sciences, social
+sciences, humaniora — dan **lintas jenis riset**: kuantitatif, kualitatif, mixed methods, analisis
+tematik. Konvensi tiap bidang berbeda, dan skill ini tidak menyeragamkannya.
+
+Empat keadaan yang biasanya ditangani buruk panduan generik ikut ditangani: korpus non-Inggris
+yang cakupan indeksnya terbatas, riset doktrinal-normatif yang tak punya padanan PICO, metadata
+penerbit yang berbeda perilaku, dan peneliti yang bekerja sendirian.
+Rinciannya di [`docs/`](docs/).
 
 ## Skill
 
