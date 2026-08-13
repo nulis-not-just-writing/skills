@@ -148,3 +148,13 @@ Instrumen penilaian kualitas (RoB 2, ROBINS-I, AMSTAR 2, MMAT, AXIS) **tidak dis
 ini — yang ada hanya ringkasan kata sendiri dengan sitasi, karena pemeriksaan metadata CrossRef
 menunjukkan ketiganya yang pertama hanya berlisensi *text and data mining* dan dua sisanya tidak
 punya lisensi terdaftar. Unduh formulir resminya dari sumber masing-masing untuk lampiran submisi.
+
+---
+
+> **Knowledge kept is knowledge dying.**
+>
+> Shared, it outlives the one who shared it — growing in hands they will never meet, living on in
+> work they will never read. And every life it goes on to have returns to them as a reward that
+> does not end.
+
+**Mubaroq ADB** · Akademi Digital Bandung | RPI Institute · <mubaroq@digitalbdg.ac.id>

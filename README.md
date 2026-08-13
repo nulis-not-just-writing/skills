@@ -139,3 +139,13 @@ Quality-assessment instruments (RoB 2, ROBINS-I, AMSTAR 2, MMAT, AXIS) are **not
 — only own-words summaries with citations, because a CrossRef metadata check showed the first
 three carry only a text-and-data-mining licence and the other two have no registered licence at
 all. Download the official forms from their own sources for submission appendices.
+
+---
+
+> **Knowledge kept is knowledge dying.**
+>
+> Shared, it outlives the one who shared it — growing in hands they will never meet, living on in
+> work they will never read. And every life it goes on to have returns to them as a reward that
+> does not end.
+
+**Mubaroq ADB** · Akademi Digital Bandung | RPI Institute · <mubaroq@digitalbdg.ac.id>
