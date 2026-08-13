@@ -31,7 +31,18 @@ melewatinya.
 
 ## Pasang
 
-Salin folder skill yang Anda mau ke direktori skill Claude Code:
+**Claude Desktop** — unduh zip yang Anda mau dari [`dist/`](dist/), lalu unggah lewat
+**Settings → Capabilities → Skills**. Tidak perlu git.
+
+| Zip | Versi |
+|---|---|
+| [`nulis-1.3.0.zip`](dist/nulis-1.3.0.zip) | 1.3.0 |
+| [`polish-manuscript-1.3.0.zip`](dist/polish-manuscript-1.3.0.zip) | 1.3.0 |
+| [`submit-1.4.0.zip`](dist/submit-1.4.0.zip) | 1.4.0 |
+| [`revisi-1.2.0.zip`](dist/revisi-1.2.0.zip) | 1.2.0 |
+| [`slr-cowork-1.4.0.zip`](dist/slr-cowork-1.4.0.zip) | 1.4.0 |
+
+**Claude Code** — salin foldernya:
 
 ```bash
 git clone https://github.com/nulis-not-just-writing/skills.git
@@ -44,7 +55,9 @@ Atau symlink bila ingin tetap mengikuti pembaruan:
 ln -s "$PWD/skills/nulis" ~/.claude/skills/nulis
 ```
 
-Untuk Claude Desktop, bungkus foldernya jadi `.zip` lalu unggah lewat **Settings → Capabilities → Skills**.
+> Nama zip memuat versi supaya sebuah berkas tidak pernah "basi" — versi baru menghasilkan
+> berkas baru, bukan menimpa yang lama. Bangun ulang dengan `./build-zips.sh` setelah menaikkan
+> versi; skripnya menolak menghasilkan zip yang kehilangan `NOTICE.md` atau membawa berkas sampah.
 
 ## Prasyarat
 

@@ -1,4 +1,8 @@
 .DS_Store
 __pycache__/
 *.pyc
+
+# Zip siap pasang DI-commit, tapi hanya yang di dist/ dan berversi.
+# Zip lain (mis. hasil unduhan/percobaan) tetap diabaikan.
 *.zip
+!dist/*.zip
