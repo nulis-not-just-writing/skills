@@ -1,5 +1,7 @@
 # Claude skills for journal article writing
 
+[![Visits](https://hits.sh/github.com/nulis-not-just-writing/skills.svg?style=flat-square&label=visits&color=444444)](https://hits.sh/github.com/nulis-not-just-writing/skills/)
+
 *[Baca dalam bahasa Indonesia](README.id.md)*
 
 Six Claude skills for writing, illustrating, polishing, submitting, and revising journal articles

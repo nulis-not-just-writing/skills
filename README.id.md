@@ -1,5 +1,7 @@
 # Skills penulisan artikel jurnal untuk Claude
 
+[![Kunjungan](https://hits.sh/github.com/nulis-not-just-writing/skills.svg?style=flat-square&label=kunjungan&color=444444)](https://hits.sh/github.com/nulis-not-just-writing/skills/)
+
 *[Read this in English](README.md)*
 
 Enam skill Claude untuk menulis, memfigurkan, memoles, menyubmit, dan merevisi artikel jurnal
