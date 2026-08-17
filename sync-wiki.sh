@@ -150,7 +150,7 @@ if [ -z "$(git status --porcelain)" ]; then
 fi
 
 git add -A
-git -c user.name="Mubaroq ADB" -c user.email="isma@upi.edu" \
+git -c user.name="mubaroq" -c user.email="mubaroq@digitalbdg.ac.id" \
     commit -q -m "Segarkan dari docs/ (cerminan otomatis, dua bahasa)"
 git push -q origin HEAD
 echo "  ✓ Wiki disegarkan: $(ls *.md | wc -l | tr -d ' ') halaman"
