@@ -15,6 +15,7 @@ desktop, bagian inilah yang Anda butuhkan. Kalau Anda mengetik `claude` di termi
    | Skill | Untuk apa | Unduh |
    |---|---|---|
    | `nulis` | struktur artikel | [nulis-1.4.0.zip](https://github.com/nulis-not-just-writing/skills/raw/main/dist/nulis-1.4.0.zip) |
+   | `visualisasi-data` | figur ilmiah | [visualisasi-data-1.0.0.zip](https://github.com/nulis-not-just-writing/skills/raw/main/dist/visualisasi-data-1.0.0.zip) |
    | `polish-manuscript` | prosa & mekanik | [polish-manuscript-1.4.0.zip](https://github.com/nulis-not-just-writing/skills/raw/main/dist/polish-manuscript-1.4.0.zip) |
    | `submit` | gerbang pra-submisi | [submit-1.5.0.zip](https://github.com/nulis-not-just-writing/skills/raw/main/dist/submit-1.5.0.zip) |
    | `revisi` | setelah keputusan editor | [revisi-1.3.0.zip](https://github.com/nulis-not-just-writing/skills/raw/main/dist/revisi-1.3.0.zip) |
@@ -43,18 +44,22 @@ cd skills
 **Salin** (mudah, tapi tidak ikut pembaruan):
 
 ```bash
-cp -R nulis polish-manuscript submit revisi slr-cowork ~/.claude/skills/
+cp -R nulis visualisasi-data polish-manuscript submit revisi slr-cowork ~/.claude/skills/
 ```
 
 **Symlink** (ikut pembaruan setiap `git pull`):
 
 ```bash
-for s in nulis polish-manuscript submit revisi slr-cowork; do
+for s in nulis visualisasi-data polish-manuscript submit revisi slr-cowork; do
   ln -s "$PWD/$s" ~/.claude/skills/$s
 done
 ```
 
-Pasang yang Anda perlukan saja — kelimanya berdiri sendiri.
+Pasang yang Anda perlukan saja — keenamnya berdiri sendiri.
+
+> `visualisasi-data` satu-satunya skill yang perlu paket terpasang untuk bisa menggambar:
+> `pip install matplotlib numpy`. Panduan rancangannya tetap jalan tanpa itu. Lihat
+> [Prasyarat](Prasyarat.md).
 
 ## Memastikan sudah terpasang
 

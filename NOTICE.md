@@ -13,6 +13,7 @@ ulang. **Tiap skill juga punya `NOTICE.md` sendiri** yang dilingkupi pada apa ya
 | `slr-cowork` | 3 checklist verbatim, 1 skrip, 1 pola desain, kutipan pernyataan sikap | CC BY 4.0 + MIT |
 | `nulis` | konsep kerangka analisis tematik; ringkasan kata sendiri COREQ/SRQR/CROSS | MIT (konsep) |
 | `revisi` | **konsep dari sumber non-komersial** | **CC BY-NC 4.0** ⚠ |
+| `visualisasi-data` | tidak ada | — |
 
 ## Sumber
 
@@ -35,6 +36,8 @@ Tiga prinsip keputusan editorial di `revisi/SKILL.md` Tahap 3, ditulis ulang sep
 kata sendiri. **Batasan NC diperlakukan konservatif**: materi yang diturunkan dari sumber itu tidak
 boleh masuk ke produk atau pelatihan berbayar tanpa izin pemegang hak. Rinciannya di
 `revisi/NOTICE.md`.
+
+**`visualisasi-data` tidak memuat karya pihak ketiga**, jadi ia tidak punya `NOTICE.md` sendiri.
 
 ## Salinan verbatim — CC BY 4.0
 

@@ -2,7 +2,7 @@
 
 *[Read this in English](../FAQ.md)*
 
-## Apakah harus memasang kelimanya?
+## Apakah harus memasang keenamnya?
 
 Tidak. **Tiap skill berfungsi penuh sendirian.** Pasang yang Anda perlukan. Bila tetangganya ada,
 sebagian langkah jadi lebih dalam — tapi tidak ada yang macet karena skill lain tidak ada.
@@ -15,9 +15,34 @@ review"*.
 
 ## Harus pasang Python?
 
-Tidak wajib. Tanpa Python, sebagian dimensi dikerjakan manual dan **skill diminta mengatakan
-bahwa cakupannya berkurang** — bukan diam-diam melewatinya. Bila ada, tidak perlu `pip install`
-apa pun: semua skrip stdlib-only.
+Untuk lima skill teks, tidak wajib. Tanpa Python, sebagian dimensi dikerjakan manual dan **skill
+diminta mengatakan bahwa cakupannya berkurang** — bukan diam-diam melewatinya. Bila ada, tidak perlu
+`pip install` apa pun: semua skrip di kelimanya stdlib-only.
+
+**`visualisasi-data` berbeda**, karena ia benar-benar menggambar. Ia butuh `matplotlib` dan `numpy`
+(`pip install matplotlib numpy`). Tanpa keduanya, penggambaran berhenti dan mengatakannya — bukan
+diam-diam turun ke grafik yang lebih buruk — sementara paruh yang memilih bentuk visual, karena
+berupa prosa, tetap bekerja.
+
+## Kenapa `visualisasi-data` melanggar aturan stdlib-only?
+
+Karena yang jadi tujuan bukan aturannya, melainkan **tidak mengagetkan Anda**. Skill yang merender
+figur tidak bisa merender tanpa pustaka perender, dan berpura-pura sebaliknya berarti mengirimkan
+skill yang gagal tepat pada saat Anda membutuhkannya.
+
+Jadi ketergantungannya dinyatakan di depan alih-alih ditemukan di tengah jalan, dan dijaga sekecil
+mungkin: `matplotlib` dan `numpy` wajib; `scipy`, `pillow`, `pypdf`, dan `mne` opsional, masing-masing
+memperdalam satu pemeriksaan tertentu. Perlu dicatat, `topomap` **tidak** membutuhkan MNE.
+
+## Bisakah ia menggambar figur untuk bidang yang tidak ada di daftar domainnya?
+
+Bisa, dan itu memang disengaja. Empat belas berkas domain adalah jalan pintas, bukan batas cakupan.
+Substrat visual ditentukan oleh **struktur datanya**, bukan oleh nama bidangnya, dan struktur itu
+jumlahnya terbatas — satu berkas rujukan terpisah memetakan 22 struktur ke substratnya, lengkap
+dengan prosedur lima langkah untuk menemukan konvensi bidang yang belum dikenal.
+
+Aturannya eksplisit di dalam skill: **jangan pernah mundur ke bar chart hanya karena bidangnya tidak
+terdaftar.**
 
 ## Semua rujukan saya tiba-tiba `UNVERIFIED`. Naskah saya bermasalah?
 

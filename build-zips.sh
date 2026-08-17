@@ -10,7 +10,7 @@
 
 set -euo pipefail
 cd "$(dirname "$0")"
-SKILLS=(nulis polish-manuscript submit revisi slr-cowork)
+SKILLS=(nulis polish-manuscript submit revisi slr-cowork visualisasi-data)
 [ $# -gt 0 ] && SKILLS=("$@")
 
 command -v zip >/dev/null || { echo "zip tidak ada di PATH"; exit 1; }
@@ -30,14 +30,24 @@ for s in "${SKILLS[@]}"; do
   find "$s" -name '__pycache__' -type d -exec rm -rf {} + 2>/dev/null || true
   zip -r -q -X "$out" "$s" -x "*/.DS_Store" "*/__pycache__/*" "*.pyc"
 
-  # gerbang: NOTICE wajib ikut, sampah wajib nol.
+  # gerbang: NOTICE wajib ikut BILA skill itu memang membawa karya pihak ketiga,
+  # sampah wajib nol.
+  #
+  # Kewajiban atribusi mengikuti apa yang dibawa, bukan diberlakukan rata. Skill
+  # yang seluruhnya karya sendiri tidak perlu NOTICE kosong yang hanya mengatakan
+  # "tidak ada apa-apa di sini" — dan bila suatu saat ia mulai membawa sesuatu,
+  # namanya ditambahkan ke daftar ini supaya gerbangnya kembali menjaga.
   # Daftar isi diambil SEKALI ke variabel — `grep -q` di dalam pipeline akan
   # membuat `unzip` kena SIGPIPE dan `pipefail` salah membacanya sebagai gagal.
   listing=$(unzip -l "$out")
 
-  case "$listing" in
-    *"$s/NOTICE.md"*) ;;
-    *) echo "  ✗ $out: NOTICE.md tidak ikut — atribusi wajib ada di tiap zip"; exit 1 ;;
+  case " nulis polish-manuscript submit revisi slr-cowork " in
+    *" $s "*)
+      case "$listing" in
+        *"$s/NOTICE.md"*) ;;
+        *) echo "  ✗ $out: NOTICE.md tidak ikut — $s membawa karya pihak ketiga"; exit 1 ;;
+      esac
+      ;;
   esac
 
   j=$(printf '%s\n' "$listing" | grep -cE '\.DS_Store|__MACOSX|__pycache__|\.pyc' || true)

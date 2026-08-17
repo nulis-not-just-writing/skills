@@ -2,9 +2,9 @@
 
 *[Read this in English](README.md)*
 
-Lima skill Claude untuk menulis, memoles, menyubmit, dan merevisi artikel jurnal berstandar
-Q1 (Scopus/WoS) — plus satu untuk menjalankan *systematic literature review* dari nol sampai
-manuskrip.
+Enam skill Claude untuk menulis, memfigurkan, memoles, menyubmit, dan merevisi artikel jurnal
+berstandar Q1 (Scopus/WoS) — termasuk satu yang menjalankan *systematic literature review* dari nol
+sampai manuskrip.
 
 **Bahasa kerjanya mengikuti bahasa Anda** — tanya dalam bahasa Indonesia, dijawab Indonesia;
 tanya dalam bahasa Inggris, dijawab Inggris. Bahasa naskahnya sendiri mengikuti jurnal target,
@@ -20,6 +20,7 @@ bukan hukum alam, dan naskah matematika tidak dipaksa mengikuti pola naskah biol
 | Skill | Menjawab | Versi |
 |---|---|---|
 | [`nulis`](nulis/) | apakah tiap section punya *move* yang benar, dan apakah RQ terlacak dari gap sampai kontribusi? | 1.4.0 |
+| [`visualisasi-data`](visualisasi-data/) | apakah bentuk figurnya mengatakan sesuatu tentang objek yang diteliti? | 1.0.0 |
 | [`polish-manuscript`](polish-manuscript/) | apakah kalimatnya jelas, argumennya kokoh, klaimnya terkalibrasi? | 1.4.0 |
 | [`submit`](submit/) | apakah naskah lolos sepuluh menit pertama editor, atau dipulangkan sebelum direview? | 1.5.0 |
 | [`revisi`](revisi/) | apakah tiap butir komentar reviewer terjawab, dan bisakah editor menemukan perubahannya? | 1.3.0 |
@@ -31,6 +32,12 @@ bukan hukum alam, dan naskah matematika tidak dipaksa mengikuti pola naskah biol
 memetakan gap → RQ → desain → hasil → kontribusi sebagai satu baris per RQ yang tembus lima
 section, dan mengalibrasi seberapa berani klaim boleh dinyatakan di bidang Anda. Empat mode:
 outline, menyusun section, mengaudit draf, memperbaiki bagian tertentu.
+
+**[`visualisasi-data`](visualisasi-data/)** — *figur*. Memilih bentuk visual dari apa yang satu baris
+data itu *sebenarnya* — posisi di kulit kepala jadi topografi, wilayah jadi peta, studi dalam
+sintesis jadi forest plot — alih-alih jatuh ke bar chart. Lalu menahan figurnya pada fidelitas data,
+sebaran yang tampak, aman buta warna, dan spesifikasi cetak jurnal. Empat belas rute domain, plus
+tabel struktur data supaya bidang yang tidak terdaftar tidak pernah jadi jalan buntu.
 
 **[`polish-manuscript`](polish-manuscript/)** — *prosa*. Audit sepuluh dimensi atas draf yang
 strukturnya sudah benar. Cirinya yang paling membedakan adalah **gerbang fidelitas**: tiap angka
@@ -70,7 +77,7 @@ lebih dalam — tetapi tidak ada langkah yang macet karena tetangganya tidak ada
 memuat bagian *"Berdiri sendiri atau berdampingan"* dengan tabel: apa yang bertambah bila skill
 lain ada, dan apa jalan keluarnya bila tidak.
 
-Satu aturan berlaku di kelimanya: **langkah yang tidak bisa dijalankan tidak dianggap lolos.**
+Satu aturan berlaku di keenamnya: **langkah yang tidak bisa dijalankan tidak dianggap lolos.**
 Skill diminta mengatakan apa adanya bahwa langkah itu di luar jangkauan, bukan diam-diam
 melewatinya.
 
@@ -87,6 +94,7 @@ Code**.
    | Skill | Untuk apa | Unduh |
    |---|---|---|
    | `nulis` | struktur artikel | [nulis-1.4.0.zip](https://github.com/nulis-not-just-writing/skills/raw/main/dist/nulis-1.4.0.zip) |
+   | `visualisasi-data` | figur ilmiah | [visualisasi-data-1.0.0.zip](https://github.com/nulis-not-just-writing/skills/raw/main/dist/visualisasi-data-1.0.0.zip) |
    | `polish-manuscript` | prosa & mekanik | [polish-manuscript-1.4.0.zip](https://github.com/nulis-not-just-writing/skills/raw/main/dist/polish-manuscript-1.4.0.zip) |
    | `submit` | gerbang pra-submisi | [submit-1.5.0.zip](https://github.com/nulis-not-just-writing/skills/raw/main/dist/submit-1.5.0.zip) |
    | `revisi` | setelah keputusan editor | [revisi-1.3.0.zip](https://github.com/nulis-not-just-writing/skills/raw/main/dist/revisi-1.3.0.zip) |
@@ -109,16 +117,16 @@ cara memperbarui dan mencopot, ada di [docs/id/Pemasangan.md](docs/id/Pemasangan
 ```bash
 git clone https://github.com/nulis-not-just-writing/skills.git
 cd skills
-cp -R nulis polish-manuscript submit revisi slr-cowork ~/.claude/skills/
+cp -R nulis visualisasi-data polish-manuscript submit revisi slr-cowork ~/.claude/skills/
 ```
 
-Pasang yang Anda perlukan saja — kelimanya berdiri sendiri.
+Pasang yang Anda perlukan saja — keenamnya berdiri sendiri.
 ## Prasyarat
 
-Sebagian skill punya skrip Python pembantu. **Semuanya stdlib-only** — tidak ada `pip install`,
+Lima skill teks punya skrip Python pembantu yang **semuanya stdlib-only** — tidak ada `pip install`,
 tidak ada virtualenv — dan diuji jalan pada Python 3.9.6 bawaan macOS maupun 3.12.
 
-Skill tetap berfungsi tanpa Python: cakupan sebagian dimensi berkurang, dan skill diminta
+Kelimanya tetap berfungsi tanpa Python: cakupan sebagian dimensi berkurang, dan skill diminta
 mengatakan itu alih-alih diam. Pandoc opsional, hanya untuk masukan `.docx`.
 
 | Kebutuhan | Untuk apa | Bila tidak ada |
@@ -127,15 +135,20 @@ mengatakan itu alih-alih diam. Pandoc opsional, hanya untuk masukan `.docx`.
 | pandoc | membaca `.docx` | ekspor naskah ke `.md` atau `.tex` |
 | MCP `scholar`/`zotero` | verifikasi sitasi & deteksi retraksi | jatuh ke `WebSearch`/`WebFetch`, lalu ke penandaan manual |
 | R + `robvis` | figur traffic-light risk of bias | aplikasi web robvis, atau tabel studi × domain |
+| `matplotlib` + `numpy` | menggambar figur di `visualisasi-data` | **skill itu tidak bisa menggambar** — panduan rancangannya tetap berlaku |
+
+**`visualisasi-data` pengecualiannya.** Ia menggambar, jadi `matplotlib` dan `numpy` memang wajib
+(`pip install matplotlib numpy`). Paruh rancangannya — Uji Rujukan, rute domain, aturan figur —
+berupa prosa dan tidak menuntut pemasangan apa pun.
 
 ## Rantai kerja
 
 ```
-nulis ──▶ polish-manuscript ──▶ submit ──▶ [keputusan editor] ──▶ revisi
-  ▲                                                                  │
-  └──────────── bila reviewer menuntut RQ/kontribusi berubah ─────────┘
+nulis ──▶ visualisasi-data ──▶ polish-manuscript ──▶ submit ──▶ [keputusan editor] ──▶ revisi
+  ▲                                                                                       │
+  └──────────────────── bila reviewer menuntut RQ/kontribusi berubah ─────────────────────┘
 
-slr-cowork ──▶ (Tahap 9 menghasilkan manuskrip) ──▶ polish-manuscript ──▶ submit
+slr-cowork ──▶ (Tahap 9 menghasilkan manuskrip) ──▶ visualisasi-data ──▶ polish-manuscript ──▶ submit
 ```
 
 ## Lisensi

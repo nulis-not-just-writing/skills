@@ -2,8 +2,8 @@
 
 *[Baca dalam bahasa Indonesia](id/README.md)*
 
-Five skills for writing, polishing, submitting, and revising journal articles at Q1 (Scopus/WoS)
-standard — plus one for running a *systematic literature review* from nothing to a
+Six skills for writing, illustrating, polishing, submitting, and revising journal articles at Q1
+(Scopus/WoS) standard — including one that runs a *systematic literature review* from nothing to a
 submission-ready manuscript.
 
 **They work in your language** — ask in English, get English; ask in Indonesian, get Indonesian.
@@ -20,6 +20,8 @@ Start from where you are, not from the skill names.
 | Your situation | Skill |
 |---|---|
 | You have data and results but no idea how to assemble an article | **[nulis](nulis.md)** |
+| Your figures all end up as bar charts, or a reviewer called them uninformative | **[visualisasi-data](visualisasi-data.md)** |
+| You need journal-spec figures for `.tex` or `.docx` — column width, fonts, 300 dpi | **[visualisasi-data](visualisasi-data.md)** |
 | The draft is done but reads stiff, long-winded, or "AI-ish" | **[polish-manuscript](polish-manuscript.md)** |
 | The manuscript is finished and about to go to a journal | **[submit](submit.md)** |
 | It was rejected without review and you do not know why | **[submit](submit.md)** |
@@ -27,7 +29,7 @@ Start from where you are, not from the skill names.
 | You want to write a systematic review | **[slr-cowork](slr-cowork.md)** |
 | A reviewer said your SLR method is indefensible | **[slr-cowork](slr-cowork.md)** |
 
-Not sure? See **[Workflow](Workflow.md)** — how the five connect.
+Not sure? See **[Workflow](Workflow.md)** — how the six connect.
 
 ## What each one does
 
@@ -35,6 +37,12 @@ Not sure? See **[Workflow](Workflow.md)** — how the five connect.
 maps gap → RQ → design → results → contribution as one line per RQ running through five sections,
 and calibrates how boldly claims may be stated for your field. Four modes: outline, draft a
 section, audit an existing draft, refine a passage.
+
+**[visualisasi-data](visualisasi-data.md)** — *figures*. Picks the visual form from what a row of
+data actually *is* — scalp positions become a topography, regions become a map, studies in a
+synthesis become a forest plot — instead of defaulting to bars. Then holds the figure to data
+fidelity, visible spread, colour-blind safety, and journal print specification. Fourteen domain
+routes, and a structure table so an unlisted field is never a dead end.
 
 **[polish-manuscript](polish-manuscript.md)** — *prose*. A ten-dimension audit of a draft whose
 structure is already sound. Its distinguishing feature is a **fidelity gate**: every number and

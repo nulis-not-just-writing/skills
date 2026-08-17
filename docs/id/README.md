@@ -2,8 +2,8 @@
 
 *[Read this in English](../README.md)*
 
-Lima skill untuk menulis, memoles, menyubmit, dan merevisi artikel jurnal berstandar Q1
-(Scopus/WoS) — plus satu untuk menjalankan *systematic literature review* dari nol sampai
+Enam skill untuk menulis, memfigurkan, memoles, menyubmit, dan merevisi artikel jurnal berstandar
+Q1 (Scopus/WoS) — termasuk satu yang menjalankan *systematic literature review* dari nol sampai
 manuskrip siap kirim.
 
 **Bahasa kerjanya mengikuti bahasa Anda** — tanya dalam bahasa Indonesia, dijawab Indonesia;
@@ -24,6 +24,8 @@ Mulai dari keadaan Anda sekarang, bukan dari nama skill-nya.
 | Keadaan Anda | Skill |
 |---|---|
 | Punya data dan hasil, belum tahu cara menyusunnya jadi artikel | **[nulis](nulis.md)** |
+| Figur Anda berakhir jadi bar chart semua, atau reviewer bilang figurnya tidak informatif | **[visualisasi-data](visualisasi-data.md)** |
+| Butuh figur sesuai spesifikasi jurnal untuk `.tex` atau `.docx` — lebar kolom, font, 300 dpi | **[visualisasi-data](visualisasi-data.md)** |
 | Draf sudah jadi tapi terasa kaku, bertele-tele, atau "berbau AI" | **[polish-manuscript](polish-manuscript.md)** |
 | Naskah dianggap selesai, mau dikirim ke jurnal | **[submit](submit.md)** |
 | Naskah pernah ditolak tanpa direview, tidak tahu kenapa | **[submit](submit.md)** |
@@ -31,7 +33,7 @@ Mulai dari keadaan Anda sekarang, bukan dari nama skill-nya.
 | Mau menulis tinjauan sistematis / *systematic review* | **[slr-cowork](slr-cowork.md)** |
 | Reviewer bilang metode SLR Anda tidak dapat dipertahankan | **[slr-cowork](slr-cowork.md)** |
 
-Belum yakin? Lihat **[Alur kerja](Alur-kerja.md)** — bagaimana kelimanya saling menyambung.
+Belum yakin? Lihat **[Alur kerja](Alur-kerja.md)** — bagaimana keenamnya saling menyambung.
 
 ## Apa yang dikerjakan masing-masing
 
@@ -39,6 +41,12 @@ Belum yakin? Lihat **[Alur kerja](Alur-kerja.md)** — bagaimana kelimanya salin
 memetakan gap → RQ → desain → hasil → kontribusi sebagai satu baris per RQ yang tembus lima
 section, dan mengalibrasi seberapa berani klaim boleh dinyatakan di bidang Anda. Empat mode:
 outline, menyusun section, mengaudit draf yang sudah ada, memperbaiki bagian tertentu.
+
+**[visualisasi-data](visualisasi-data.md)** — *figur*. Memilih bentuk visual dari apa yang satu
+baris data itu *sebenarnya* — posisi di kulit kepala jadi topografi, wilayah jadi peta, studi dalam
+sintesis jadi forest plot — alih-alih jatuh ke bar chart. Lalu menahan figurnya pada fidelitas data,
+sebaran yang tampak, aman buta warna, dan spesifikasi cetak jurnal. Empat belas rute domain, plus
+tabel struktur data supaya bidang yang tidak terdaftar tidak pernah jadi jalan buntu.
 
 **[polish-manuscript](polish-manuscript.md)** — *prosa*. Audit sepuluh dimensi atas draf yang
 strukturnya sudah benar. Cirinya yang paling membedakan adalah **gerbang fidelitas**: tiap angka

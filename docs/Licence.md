@@ -30,6 +30,8 @@ repository root and inside every skill**, and both must travel with any redistri
 | `aipoch/medical-research-skills` | MIT | QA instrument selection pattern (the pattern, not the content) |
 | `Imbad0202/academic-research-skills` | **CC BY-NC 4.0** ⚠ | three editorial principles in `revisi` |
 
+**`visualisasi-data` carries no third-party work** and is not in the table.
+
 ## Verbatim CC BY 4.0 copies
 
 Licences were verified through the CrossRef metadata `license` field, not through third-party

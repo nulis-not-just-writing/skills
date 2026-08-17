@@ -14,6 +14,7 @@ is your section. If you type `claude` into a terminal, skip to [Claude Code](#cl
    | Skill | What it does | Download |
    |---|---|---|
    | `nulis` | article structure | [nulis-1.4.0.zip](https://github.com/nulis-not-just-writing/skills/raw/main/dist/nulis-1.4.0.zip) |
+   | `visualisasi-data` | scientific figures | [visualisasi-data-1.0.0.zip](https://github.com/nulis-not-just-writing/skills/raw/main/dist/visualisasi-data-1.0.0.zip) |
    | `polish-manuscript` | prose & mechanics | [polish-manuscript-1.4.0.zip](https://github.com/nulis-not-just-writing/skills/raw/main/dist/polish-manuscript-1.4.0.zip) |
    | `submit` | pre-submission gate | [submit-1.5.0.zip](https://github.com/nulis-not-just-writing/skills/raw/main/dist/submit-1.5.0.zip) |
    | `revisi` | after the editor's decision | [revisi-1.3.0.zip](https://github.com/nulis-not-just-writing/skills/raw/main/dist/revisi-1.3.0.zip) |
@@ -42,18 +43,22 @@ cd skills
 **Copy** (simple, but does not follow updates):
 
 ```bash
-cp -R nulis polish-manuscript submit revisi slr-cowork ~/.claude/skills/
+cp -R nulis visualisasi-data polish-manuscript submit revisi slr-cowork ~/.claude/skills/
 ```
 
 **Symlink** (follows updates on every `git pull`):
 
 ```bash
-for s in nulis polish-manuscript submit revisi slr-cowork; do
+for s in nulis visualisasi-data polish-manuscript submit revisi slr-cowork; do
   ln -s "$PWD/$s" ~/.claude/skills/$s
 done
 ```
 
-Install only what you need — all five stand alone.
+Install only what you need — all six stand alone.
+
+> `visualisasi-data` is the one skill that needs packages installed to do its drawing:
+> `pip install matplotlib numpy`. Its design guidance works without them. See
+> [Requirements](Requirements.md).
 
 ## Confirming it is installed
 

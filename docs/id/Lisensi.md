@@ -30,6 +30,8 @@ di dalam setiap skill**, dan keduanya wajib ikut bila Anda menyebarkan ulang.
 | `aipoch/medical-research-skills` | MIT | pola pemilihan instrumen QA (pola, bukan isi) |
 | `Imbad0202/academic-research-skills` | **CC BY-NC 4.0** ⚠ | tiga prinsip editorial di `revisi` |
 
+**`visualisasi-data` tidak memuat karya pihak ketiga** dan karena itu tidak ada di tabel.
+
 ## Salinan verbatim CC BY 4.0
 
 Lisensinya diverifikasi lewat field `license` metadata CrossRef, bukan dari indeks pihak ketiga:

@@ -2,7 +2,7 @@
 
 *[Baca dalam bahasa Indonesia](id/Tanya-jawab.md)*
 
-## Do I have to install all five?
+## Do I have to install all six?
 
 No. **Each skill works fully on its own.** Install what you need. If a neighbour is present some
 steps go deeper — but nothing stalls because another skill is absent.
@@ -15,9 +15,33 @@ review"*.
 
 ## Do I need Python?
 
-Not required. Without Python some dimensions are done manually and **the skill is required to say
-that coverage is reduced** — rather than skipping quietly. If you do have it, no `pip install` is
-needed: every script is stdlib-only.
+Not for the five text skills. Without Python some dimensions are done manually and **the skill is
+required to say that coverage is reduced** — rather than skipping quietly. If you do have it, no
+`pip install` is needed: every script in those five is stdlib-only.
+
+**`visualisasi-data` is different**, because it actually draws. It needs `matplotlib` and `numpy`
+(`pip install matplotlib numpy`). Without them the drawing stops and says so — it does not quietly
+degrade to a worse chart — while the half that chooses the visual form, being prose, keeps working.
+
+## Why does `visualisasi-data` break the stdlib-only rule?
+
+Because the rule was never the point; **not surprising you** was. A skill that renders figures
+cannot render them without a rendering library, and pretending otherwise would mean shipping a
+skill that fails at the moment you need it.
+
+So the dependency is stated up front rather than discovered mid-figure, and it is kept to the
+smallest set that does the job: `matplotlib` and `numpy`, both required; `scipy`, `pillow`, `pypdf`,
+and `mne` optional, each deepening one specific check. Notably `topomap` does **not** need MNE.
+
+## Can it draw a figure for a field that is not in its domain list?
+
+Yes, and that is deliberate. Fourteen domain files are shortcuts, not the limit of coverage. The
+visual substrate is set by the **structure of the data**, not by the name of the field, and there is
+a finite number of structures — a separate reference maps 22 of them to their substrates, with a
+five-step procedure for working out the convention of an unfamiliar field.
+
+The rule is explicit inside the skill: **never fall back to a bar chart just because the field is
+not listed.**
 
 ## All my references suddenly came back `UNVERIFIED`. Is my manuscript broken?
 

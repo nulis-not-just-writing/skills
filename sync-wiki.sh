@@ -90,6 +90,7 @@ cat > "$W/_Sidebar.md" <<EOF
 
 **Skills**
 - [nulis](nulis)
+- [visualisasi-data](visualisasi-data)
 - [polish-manuscript](polish-manuscript)
 - [submit](submit)
 - [revisi](revisi)
@@ -106,6 +107,7 @@ cat > "$W/_Sidebar.md" <<EOF
 - [Alur kerja](ID-Alur-kerja)
 - [Prasyarat](ID-Prasyarat)
 - [nulis](ID-nulis)
+- [visualisasi-data](ID-visualisasi-data)
 - [polish-manuscript](ID-polish-manuscript)
 - [submit](ID-submit)
 - [revisi](ID-revisi)

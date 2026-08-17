@@ -2,8 +2,8 @@
 
 *[Baca dalam bahasa Indonesia](README.id.md)*
 
-Five Claude skills for writing, polishing, submitting, and revising journal articles at Q1
-(Scopus/WoS) standard — plus one for running a systematic literature review end to end.
+Six Claude skills for writing, illustrating, polishing, submitting, and revising journal articles
+at Q1 (Scopus/WoS) standard — including one that runs a systematic literature review end to end.
 
 **Any field, any research design.** What differs between fields is not the workflow but the
 convention, and these skills pick the right convention instead of flattening everything: claim
@@ -16,6 +16,7 @@ paper.
 | Skill | Answers | Version |
 |---|---|---|
 | [`nulis`](nulis/) | does each section carry the right *moves*, and is every RQ traceable from gap to contribution? | 1.4.0 |
+| [`visualisasi-data`](visualisasi-data/) | does the figure's shape say anything about the thing being studied? | 1.0.0 |
 | [`polish-manuscript`](polish-manuscript/) | is the prose clear, the argument sound, the claims calibrated? | 1.4.0 |
 | [`submit`](submit/) | will this survive the editor's first ten minutes, or come back before review? | 1.5.0 |
 | [`revisi`](revisi/) | is every reviewer comment answered, and can the editor *find* each change? | 1.3.0 |
@@ -27,6 +28,12 @@ paper.
 maps gap → RQ → design → results → contribution as one line per RQ running through five sections,
 and calibrates how boldly claims may be stated for your field. Four modes: outline, draft a
 section, audit an existing draft, refine a passage.
+
+**[`visualisasi-data`](visualisasi-data/)** — *figures*. Picks the visual form from what a row of
+data actually *is* — scalp positions become a topography, regions become a map, studies in a
+synthesis become a forest plot — instead of defaulting to bars. Then holds the figure to data
+fidelity, visible spread, colour-blind safety, and journal print specification. Fourteen domain
+routes, and a structure table so an unlisted field is never a dead end.
 
 **[`polish-manuscript`](polish-manuscript/)** — *prose*. A ten-dimension audit of a draft whose
 structure is already sound. Its distinguishing feature is a **fidelity gate**: every number and
@@ -79,6 +86,7 @@ never need to read it.
    | Skill | What it does | Download |
    |---|---|---|
    | `nulis` | article structure | [nulis-1.4.0.zip](https://github.com/nulis-not-just-writing/skills/raw/main/dist/nulis-1.4.0.zip) |
+   | `visualisasi-data` | scientific figures | [visualisasi-data-1.0.0.zip](https://github.com/nulis-not-just-writing/skills/raw/main/dist/visualisasi-data-1.0.0.zip) |
    | `polish-manuscript` | prose & mechanics | [polish-manuscript-1.4.0.zip](https://github.com/nulis-not-just-writing/skills/raw/main/dist/polish-manuscript-1.4.0.zip) |
    | `submit` | pre-submission gate | [submit-1.5.0.zip](https://github.com/nulis-not-just-writing/skills/raw/main/dist/submit-1.5.0.zip) |
    | `revisi` | after the editor's decision | [revisi-1.3.0.zip](https://github.com/nulis-not-just-writing/skills/raw/main/dist/revisi-1.3.0.zip) |
@@ -132,8 +140,8 @@ go deeper — but nothing stalls because another skill is absent.
 
 ## Requirements
 
-Nothing is mandatory. All five work without any of the tools below; what shrinks is speed and
-traceability, not rigour — and the skill is required to *say* what it skipped.
+For the five text skills nothing is mandatory: they work without any of the tools below, and what
+shrinks is speed and traceability, not rigour — the skill is required to *say* what it skipped.
 
 | Tool | Used for | Without it |
 |---|---|---|
@@ -141,9 +149,14 @@ traceability, not rigour — and the skill is required to *say* what it skipped.
 | pandoc | reading `.docx` | export to `.md` or `.tex` |
 | MCP `scholar`/`zotero` | citation verification + retraction detection | falls back to web lookup, then explicit flagging |
 | R + `robvis` | risk-of-bias traffic-light figures | robvis web app, or a study × domain table |
+| `matplotlib` + `numpy` | drawing figures in `visualisasi-data` | **that skill cannot draw** — the design guidance still applies |
 
-Every Python script is **stdlib-only** — no `pip install`, no virtualenv — and tested on both the
-macOS system Python 3.9.6 and 3.12.
+Every Python script in the five text skills is **stdlib-only** — no `pip install`, no virtualenv —
+and tested on both the macOS system Python 3.9.6 and 3.12.
+
+**`visualisasi-data` is the exception.** It draws, so it genuinely needs `matplotlib` and `numpy`
+(`pip install matplotlib numpy`). Its design half — the referent test, the domain routes, the
+figure rules — is prose and needs nothing installed.
 
 ## Licence
 
